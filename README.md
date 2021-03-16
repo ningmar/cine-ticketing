@@ -1,4 +1,4 @@
-# cine-app
+# cine-ticketing front end
 
 ## Project setup
 ```
