@@ -293,7 +293,7 @@
 </template>
 
 <script>
-import MainDropDown from "../../components/MainDropDown";
+import MainDropDown from "../common/MainDropDown";
 export default {
   data() {
     return {
