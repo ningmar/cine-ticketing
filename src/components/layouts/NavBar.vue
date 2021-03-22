@@ -1,11 +1,11 @@
 <template>
   <div id="nav">
-    <div class="container">
+    <div class="container bg-gray-50 p-4">
       <div class="min-w-0 grid grid-col-3 grid-flow-col">
         <div
           class="mt-1 flex sm:flex-row sm:flex-wrap sm:mt-0 sm:space-x-6 cols"
         >
-          <div class="mt-2 flex items-center text-sm text-gray-500">
+          <div class="mt-2 hidden sm:flex items-center text-sm text-gray-500">
             <!-- Heroicono name:mail -->
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -298,11 +298,11 @@ export default {
   data() {
     return {
       username: "John Wick",
-      email: "dontkillmydog@johnwick.com",
+      email: "dontkillmydog@johnwick.com"
     };
   },
   components: {
-    MainDropDown,
-  },
+    MainDropDown
+  }
 };
 </script>
