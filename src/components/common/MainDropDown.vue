@@ -12,12 +12,12 @@ export default {
   data() {
     return {
       open: false
-    };
+    }
   },
   methods: {
     toggleOpen() {
-      this.open = !this.open;
+      this.open = !this.open
     }
   }
-};
+}
 </script>
