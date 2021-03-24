@@ -1,21 +1,25 @@
 <template>
-  <div class="max-w-6xl mx-auto flex flex-wrap">
-    <product-card
-      v-for="product in products"
-      :key="product.id"
-      :category="product.category"
-      :name="product.name"
-      :image="product.image"
-    ></product-card>
-  </div>
+<div>
+  <section-title title="cartelera artesiete"></section-title>
+    <div class="max-w-6xl mx-auto flex flex-wrap">
+      <product-card
+        v-for="product in products"
+        :key="product.id"
+        :category="product.category"
+        :name="product.name"
+        :image="product.image"
+      ></product-card>
+    </div>
+</div>
 </template>
 
 <script>
 import ProductCard from "./ui/ProductCard";
+import SectionTitle from "./ui/SectionTitle";
 
 export default {
   name: "Products",
-  components: { ProductCard },
+  components: { ProductCard, SectionTitle },
   data() {
     return {
       products: [
