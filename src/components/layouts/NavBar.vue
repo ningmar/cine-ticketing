@@ -293,16 +293,16 @@
 </template>
 
 <script>
-import MainDropDown from "../common/MainDropDown";
+import MainDropDown from '../common/MainDropDown'
 export default {
   data() {
     return {
-      username: "John Wick",
-      email: "dontkillmydog@johnwick.com"
-    };
+      username: 'John Wick',
+      email: 'dontkillmydog@johnwick.com'
+    }
   },
   components: {
     MainDropDown
   }
-};
+}
 </script>

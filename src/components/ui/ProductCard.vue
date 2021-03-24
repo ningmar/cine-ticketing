@@ -31,13 +31,13 @@
 
 <script>
 export default {
-  name: "ProductCard",
+  name: 'ProductCard',
   props: {
     category: String,
     name: String,
-    image: String,
-  },
-};
+    image: String
+  }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

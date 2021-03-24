@@ -8,10 +8,10 @@
 </template>
 
 <script>
-import NavBar from "./components/layouts/NavBar";
+import NavBar from './components/layouts/NavBar'
 
 export default {
   components: { NavBar }
-};
+}
 </script>
 <style></style>
