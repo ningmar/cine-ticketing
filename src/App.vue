@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import NavBar from "./components/layouts/NavBar";
-import AppFooter from "./components/layouts/AppFooter";
+import NavBar from './components/layouts/NavBar'
+import AppFooter from './components/layouts/AppFooter'
 
 export default {
   components: { NavBar, AppFooter }
