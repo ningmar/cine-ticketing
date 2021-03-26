@@ -294,7 +294,9 @@
 
 <script>
 import MainDropDown from '../common/MainDropDown'
+
 export default {
+  name: 'AppHeader',
   data() {
     return {
       username: 'John Wick',
