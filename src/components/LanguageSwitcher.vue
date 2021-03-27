@@ -62,7 +62,7 @@ export default {
     return {
       isOpen: false,
       locales: ['en', 'es'],
-      selectedLocale: 'en',
+      selectedLocale: 'es',
       publicPath: process.env.BASE_URL
     }
   },
