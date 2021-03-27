@@ -107,8 +107,8 @@
       </div>
       <!-- Nav Lists -->
       <div
-        :class="isMenuOpen ? 'block' : 'hidden'"
-        class="my-2 w-full lg:flex lg:justify-between uppercase text-sm text-gray-500 tracking-widest font-extrabold"
+        :class="isMenuOpen ? 'h-custom' : 'h-0'"
+        class="my-2 w-full overflow-hidden transition-all duration-500 ease-in-out lg:h-auto lg:flex lg:justify-between uppercase text-sm text-gray-500 tracking-widest font-extrabold"
       >
         <a href="#" class="group py-2 lg:px-4 block">
           <span class="align-middle group-hover:text-gray-900">
@@ -249,5 +249,8 @@ header.scrolled {
   @apply left-0;
   @apply w-full;
   @apply shadow-xl;
+}
+.h-custom {
+  height: 303px;
 }
 </style>
