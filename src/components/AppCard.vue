@@ -1,7 +1,7 @@
 <template>
   <div class="lg:w-2/12 md:w-3/12 sm:w-4/12 w-6/12 px-4">
     <div class="mb-8">
-      <div class="relative border-b-2 border-gray-600">
+      <div class="border-b-2 border-gray-600">
         <img class="max-w-full h-auto" :src="image" />
       </div>
       <div class="py-2">
