@@ -111,12 +111,14 @@
         class="my-2 w-full lg:flex lg:justify-between uppercase text-sm text-gray-500 tracking-widest font-extrabold"
       >
         <a href="#" class="group py-2 lg:px-4">
-          <span class="align-middle group-hover:text-gray-900">Inicio</span>
+          <span class="align-middle group-hover:text-gray-900">
+            Inicio
+          </span>
         </a>
         <a href="#" class="group py-2 lg:px-4">
-          <span class="align-middle group-hover:text-gray-900"
-            >Nuestros Cines</span
-          >
+          <span class="align-middle group-hover:text-gray-900">
+            Nuestros Cines
+          </span>
           <svg
             class="inline h-2.5 w-2.5 ml-1 fill-current text-gray-500 group-hover:text-gray-900"
             viewBox="0 0 320 207"
@@ -129,7 +131,9 @@
           </svg>
         </a>
         <a href="#" class="group py-2 lg:px-4">
-          <span class="align-middle group-hover:text-gray-900">Cartelera</span>
+          <span class="align-middle group-hover:text-gray-900">
+            Cartelera
+          </span>
           <svg
             class="inline h-2.5 w-2.5 ml-1 fill-current text-gray-500 group-hover:text-gray-900"
             viewBox="0 0 320 207"
@@ -142,15 +146,19 @@
           </svg>
         </a>
         <a href="#" class="group py-2 lg:px-4">
-          <span class="align-middle group-hover:text-gray-900"
-            >Promociones</span
-          >
+          <span class="align-middle group-hover:text-gray-900">
+            Promociones
+          </span>
         </a>
         <a href="#" class="group py-2 lg:px-4">
-          <span class="align-middle group-hover:text-gray-900">Grupos</span>
+          <span class="align-middle group-hover:text-gray-900">
+            Grupos
+          </span>
         </a>
         <a href="#" class="group py-2 lg:px-4">
-          <span class="align-middle group-hover:text-gray-900">Tu Compra</span>
+          <span class="align-middle group-hover:text-gray-900">
+            Tu Compra
+          </span>
           <svg
             class="inline h-2.5 w-2.5 ml-1 fill-current text-gray-500 group-hover:text-gray-900"
             viewBox="0 0 320 207"
@@ -163,9 +171,9 @@
           </svg>
         </a>
         <a href="#" class="group py-2 lg:px-4">
-          <span class="align-middle group-hover:text-gray-900"
-            >Tarjeta Artesiete</span
-          >
+          <span class="align-middle group-hover:text-gray-900">
+            Tarjeta Artesiete
+          </span>
           <svg
             class="inline h-2.5 w-2.5 ml-1 fill-current text-gray-500 group-hover:text-gray-900"
             viewBox="0 0 320 207"
@@ -189,7 +197,9 @@
             />
             <circle cx="32" cy="32" r="30" fill="none" />
           </svg>
-          <span class="hidden sm:block lg:hidden">Login</span>
+          <span class="hidden sm:block lg:hidden">
+            Login
+          </span>
         </a>
       </div>
     </nav>
