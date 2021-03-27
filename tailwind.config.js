@@ -21,6 +21,10 @@ module.exports = {
           '"Segoe UI Symbol"',
           '"Noto Color Emoji"'
         ]
+      },
+      strokeWidth: {
+        '3': '3',
+        '4': '4'
       }
     }
   },
