@@ -21,10 +21,70 @@
     </a>
     <div
       v-if="isOpen"
-      class="w-full bg-white mt-2 lg:absolute lg:left-0 lg:mt-6 lg:pt-12 lg:px-10 lg:border lg:shadow-md"
+      class="w-full bg-white mt-2 lg:absolute lg:left-0 lg:mt-6 lg:pt-12 lg:border lg:shadow-md"
     >
-      <div class="lg:flex lg:flex-wrap lg:items-start">
+      <div class="lg:flex lg:flex-wrap lg:items-start lg:mb-2 lg:px-10">
         <slot name="megaMenu"></slot>
+      </div>
+      <div class="py-4 px-12 bg-gray-100 hidden lg:flex">
+        <div class="w-1/2 my-4 flex justify-center items-center">
+          <svg
+            class="w-7 h-7 mr-4 stroke-current stroke-3 text-gray-900"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 64 64"
+          >
+            <path
+              d="M24 40.5V44c0 2 .6 5-10.4 7A14.6 14.6 0 002 62h59a14.3 14.3 0 00-11.4-11C39 49 40 46 40 44v-5"
+              fill="none"
+            />
+            <path
+              d="M46.4 33H51a3.3 3.3 0 003-3v-7a3.3 3.3 0 00-3-3h-5m-28 0h-6a3.3 3.3 0 00-3 3v7a3.3 3.3 0 003 3h5.2"
+              fill="none"
+            />
+            <path
+              d="M46 18C26 18 26 4 26 4s1 12-8 15m18 43l9.6-12m-27.7 0L28 62M17.9 50a10.8 10.8 0 01-4.9-4c4-4 5-20 5-20m28 0s0 16 4 20a10.7 10.7 0 01-4.7 4"
+              fill="none"
+            />
+            <path
+              d="M26 42c-4.7-2.9-8-8.8-8-16V16C18 5.6 25.4 2 32 2s14 3.6 14 14v16c0 4-4 7-6 7"
+              fill="none"
+            />
+            <path
+              d="M40 38.9a2.9 2.9 0 00-2.9-2.9h-2.2a2.9 2.9 0 00-2.9 2.9 3 3 0 002.9 3.1H37a3 3 0 003-3.1z"
+              fill="none"
+            />
+          </svg>
+          <div>
+            <h6 class="mb-2 text-gray-800">
+              En nuestro formulario de contacto
+            </h6>
+            <p class="normal-case font-normal tracking-normal text-xs">
+              Respuesta Asegurada
+            </p>
+          </div>
+        </div>
+        <div class="w-1/2 my-4 flex justify-center items-center">
+          <svg
+            class="w-7 h-7 mr-4 stroke-current stroke-3 text-gray-900"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 64 64"
+          >
+            <path
+              d="M38 42H4.4A2.4 2.4 0 012 39.6V12.4A2.4 2.4 0 014.4 10h43.2a2.4 2.4 0 012.4 2.4V22M2 18h48m-39.9 8H26m-16 8h7"
+              fill="none"
+            />
+            <path
+              fill="none"
+              d="M38 38h24v16H38zm6 0V28a6 6 0 016-6 6 6 0 016 6v10m-6 6v4"
+            />
+          </svg>
+          <div>
+            <h6 class="mb-2 text-gray-800">Pago Seguro</h6>
+            <p class="normal-case font-normal tracking-normal text-xs">
+              Pago Seguro, Operación realizada en España
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -34,8 +94,9 @@
 export default {
   name: 'AppNavItemMegaMenu',
   props: {
-    mega: {
-      type: Boolean
+    showServices: {
+      type: Boolean,
+      default: false
     }
   },
   data() {
