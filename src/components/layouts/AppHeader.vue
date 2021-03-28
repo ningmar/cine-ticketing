@@ -108,99 +108,107 @@
       <!-- Nav Lists -->
       <div
         :class="isMenuOpen ? 'h-custom' : 'h-0'"
-        class="my-2 w-full overflow-hidden transition-all duration-500 ease-in-out lg:h-auto lg:flex lg:justify-between uppercase text-sm text-gray-500 tracking-widest font-extrabold"
+        class="my-2 w-full lg:h-auto lg:flex lg:items-center lg:justify-between overflow-hidden transition-all duration-500 ease-in-out"
       >
-        <a href="#" class="group py-2 lg:px-4 block">
-          <span class="align-middle group-hover:text-gray-900">
-            Inicio
-          </span>
-        </a>
-        <a href="#" class="group py-2 lg:px-4 block">
-          <span class="align-middle group-hover:text-gray-900">
-            Nuestros Cines
-          </span>
-          <svg
-            class="inline h-2.5 w-2.5 fill-current text-gray-500 group-hover:text-gray-900"
-            viewBox="0 0 320 207"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M143.05 199.55l-136-136c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
-            />
-          </svg>
-        </a>
-        <a href="#" class="group py-2 lg:px-4 block">
-          <span class="align-middle group-hover:text-gray-900">
-            Cartelera
-          </span>
-          <svg
-            class="inline h-2.5 w-2.5 fill-current text-gray-500 group-hover:text-gray-900"
-            viewBox="0 0 320 207"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M143.05 199.55l-136-136c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
-            />
-          </svg>
-        </a>
-        <a href="#" class="group py-2 lg:px-4 block">
-          <span class="align-middle group-hover:text-gray-900">
-            Promociones
-          </span>
-        </a>
-        <a href="#" class="group py-2 lg:px-4 block">
-          <span class="align-middle group-hover:text-gray-900">
-            Grupos
-          </span>
-        </a>
-        <a href="#" class="group py-2 lg:px-4 block">
-          <span class="align-middle group-hover:text-gray-900">
-            Tu Compra
-          </span>
-          <svg
-            class="inline h-2.5 w-2.5 fill-current text-gray-500 group-hover:text-gray-900"
-            viewBox="0 0 320 207"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M143.05 199.55l-136-136c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
-            />
-          </svg>
-        </a>
-        <a href="#" class="group py-2 lg:px-4 block">
-          <span class="align-middle group-hover:text-gray-900">
-            Tarjeta Artesiete
-          </span>
-          <svg
-            class="inline h-2.5 w-2.5 fill-current text-gray-500 group-hover:text-gray-900"
-            viewBox="0 0 320 207"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M143.05 199.55l-136-136c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
-            />
-          </svg>
-        </a>
-        <a href="#" class="group py-2 lg:px-4 flex items-center">
-          <svg
-            class="h-6 w-6 mr-2 lg:mr-0 stroke-current stroke-3 text-gray-900"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 64 64"
-          >
-            <path
-              d="M50.9 55.3a12.2 12.2 0 00-4.3-1.7c-8.1-1.5-8.1-4.1-8.1-5.7v-1a14.8 14.8 0 004.2-7.1c2.5 0 3-5.1 3-5.9s.1-3.8-2.4-3.8c5.4-14.6-8.9-20.5-19.6-13-4.4 0-4.8 6.5-3.1 13-2.5 0-2.4 3.1-2.4 3.8s.6 5.9 3 5.9a14.8 14.8 0 004.3 7.2v1c0 1.6 0 4.2-8.1 5.7a11.9 11.9 0 00-4.3 1.6"
+        <div
+          class="w-full max-w-7xl mx-auto lg:flex lg:justify-between uppercase text-sm text-gray-500 tracking-widest font-extrabold"
+        >
+          <a href="#" class="group py-2 lg:px-4 block">
+            <span class="align-middle group-hover:text-gray-900">
+              Inicio
+            </span>
+          </a>
+          <a href="#" class="group py-2 lg:px-4 block">
+            <span class="align-middle group-hover:text-gray-900">
+              Nuestros Cines
+            </span>
+            <svg
+              class="inline h-2.5 w-2.5 fill-current text-gray-500 group-hover:text-gray-900"
+              viewBox="0 0 320 207"
               fill="none"
-            />
-            <circle cx="32" cy="32" r="30" fill="none" />
-          </svg>
-          <span class="hidden sm:block lg:hidden">
-            Login
-          </span>
-        </a>
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M143.05 199.55l-136-136c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+              />
+            </svg>
+          </a>
+          <a href="#" class="group py-2 lg:px-4 block">
+            <span class="align-middle group-hover:text-gray-900">
+              Cartelera
+            </span>
+            <svg
+              class="inline h-2.5 w-2.5 fill-current text-gray-500 group-hover:text-gray-900"
+              viewBox="0 0 320 207"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M143.05 199.55l-136-136c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+              />
+            </svg>
+          </a>
+          <a href="#" class="group py-2 lg:px-4 block">
+            <span class="align-middle group-hover:text-gray-900">
+              Promociones
+            </span>
+          </a>
+          <a href="#" class="group py-2 lg:px-4 block">
+            <span class="align-middle group-hover:text-gray-900">
+              Grupos
+            </span>
+          </a>
+          <a href="#" class="group py-2 lg:px-4 block">
+            <span class="align-middle group-hover:text-gray-900">
+              Tu Compra
+            </span>
+            <svg
+              class="inline h-2.5 w-2.5 fill-current text-gray-500 group-hover:text-gray-900"
+              viewBox="0 0 320 207"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M143.05 199.55l-136-136c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+              />
+            </svg>
+          </a>
+          <a href="#" class="group py-2 lg:px-4 block">
+            <span class="align-middle group-hover:text-gray-900">
+              Tarjeta Artesiete
+            </span>
+            <svg
+              class="inline h-2.5 w-2.5 fill-current text-gray-500 group-hover:text-gray-900"
+              viewBox="0 0 320 207"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M143.05 199.55l-136-136c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+              />
+            </svg>
+          </a>
+        </div>
+        <div
+          class="lg:px-4 uppercase text-sm text-gray-500 tracking-widest font-extrabold"
+        >
+          <a href="#" class="py-2 flex items-center">
+            <svg
+              class="h-6 w-6 mr-2 lg:mr-0 stroke-current stroke-3 text-gray-900"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 64 64"
+            >
+              <path
+                d="M50.9 55.3a12.2 12.2 0 00-4.3-1.7c-8.1-1.5-8.1-4.1-8.1-5.7v-1a14.8 14.8 0 004.2-7.1c2.5 0 3-5.1 3-5.9s.1-3.8-2.4-3.8c5.4-14.6-8.9-20.5-19.6-13-4.4 0-4.8 6.5-3.1 13-2.5 0-2.4 3.1-2.4 3.8s.6 5.9 3 5.9a14.8 14.8 0 004.3 7.2v1c0 1.6 0 4.2-8.1 5.7a11.9 11.9 0 00-4.3 1.6"
+                fill="none"
+              />
+              <circle cx="32" cy="32" r="30" fill="none" />
+            </svg>
+            <span class="hidden sm:block lg:hidden">
+              Login
+            </span>
+          </a>
+        </div>
       </div>
     </nav>
   </header>
@@ -251,6 +259,6 @@ header.scrolled {
   @apply shadow-xl;
 }
 .h-custom {
-  height: 303px;
+  height: 302px;
 }
 </style>
