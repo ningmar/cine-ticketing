@@ -23,10 +23,10 @@
       v-if="isOpen"
       class="w-full bg-white mt-2 lg:absolute lg:left-0 lg:mt-6 lg:pt-12 lg:border lg:shadow-md"
     >
-      <div class="lg:flex lg:flex-wrap lg:items-start lg:mb-2 lg:px-10">
+      <div class="lg:flex lg:flex-wrap lg:mb-2 lg:px-10">
         <slot name="megaMenu"></slot>
       </div>
-      <div class="py-4 px-12 bg-gray-100 hidden lg:flex">
+      <div v-if="showServices" class="py-4 px-12 bg-gray-100 hidden lg:flex">
         <div class="w-1/2 my-4 flex justify-center items-center">
           <svg
             class="w-7 h-7 mr-4 stroke-current stroke-3 text-gray-900"
