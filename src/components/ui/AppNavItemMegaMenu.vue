@@ -4,12 +4,16 @@
       @click="isOpen = !isOpen"
       class="group py-2 lg:px-4 block cursor-pointer"
     >
-      <span class="align-middle group-hover:text-gray-900">
+      <span
+        class="align-middle group-hover:text-gray-900"
+        :class="{ 'text-gray-900': isOpen }"
+      >
         <!-- pass slot to override following text -->
         <slot>Mega Menu</slot>
       </span>
       <svg
         class="inline h-2.5 w-2.5 fill-current text-gray-500 group-hover:text-gray-900"
+        :class="{ 'text-gray-900': isOpen }"
         viewBox="0 0 320 207"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
