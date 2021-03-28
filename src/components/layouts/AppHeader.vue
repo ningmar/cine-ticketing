@@ -47,7 +47,7 @@
     </div>
 
     <!-- Main Header -->
-    <nav class="p-4 lg:flex lg:items-center">
+    <nav class="p-4 lg:flex lg:items-center relative">
       <!-- Brand Logo Container-->
       <div class="py-1 lg:px-4 flex justify-between items-center">
         <a href="#" class="mr-4">
@@ -107,87 +107,57 @@
       </div>
       <!-- Nav Lists -->
       <div
-        :class="isMenuOpen ? 'h-custom' : 'h-0'"
-        class="my-2 w-full lg:h-auto lg:flex lg:items-center lg:justify-between overflow-hidden transition-all duration-500 ease-in-out"
+        :class="isMenuOpen ? 'h-custom overflow-y-scroll' : 'max-h-0'"
+        class="my-2 w-full lg:max-h-80 lg:flex lg:items-center lg:justify-between overflow-hidden transition-all duration-500 ease-in-out"
       >
         <div
           class="w-full max-w-7xl mx-auto lg:flex lg:justify-between uppercase text-sm text-gray-500 tracking-widest font-extrabold"
         >
-          <a href="#" class="group py-2 lg:px-4 block">
-            <span class="align-middle group-hover:text-gray-900">
-              Inicio
-            </span>
-          </a>
-          <a href="#" class="group py-2 lg:px-4 block">
-            <span class="align-middle group-hover:text-gray-900">
+          <app-nav-item to="">
+            Inicio
+          </app-nav-item>
+          <app-nav-item-mega-menu :mega="true">
+            <template v-slot:default>
               Nuestros Cines
-            </span>
-            <svg
-              class="inline h-2.5 w-2.5 fill-current text-gray-500 group-hover:text-gray-900"
-              viewBox="0 0 320 207"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M143.05 199.55l-136-136c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
-              />
-            </svg>
-          </a>
-          <a href="#" class="group py-2 lg:px-4 block">
-            <span class="align-middle group-hover:text-gray-900">
-              Cartelera
-            </span>
-            <svg
-              class="inline h-2.5 w-2.5 fill-current text-gray-500 group-hover:text-gray-900"
-              viewBox="0 0 320 207"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M143.05 199.55l-136-136c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
-              />
-            </svg>
-          </a>
-          <a href="#" class="group py-2 lg:px-4 block">
-            <span class="align-middle group-hover:text-gray-900">
-              Promociones
-            </span>
-          </a>
-          <a href="#" class="group py-2 lg:px-4 block">
-            <span class="align-middle group-hover:text-gray-900">
-              Grupos
-            </span>
-          </a>
-          <a href="#" class="group py-2 lg:px-4 block">
-            <span class="align-middle group-hover:text-gray-900">
-              Tu Compra
-            </span>
-            <svg
-              class="inline h-2.5 w-2.5 fill-current text-gray-500 group-hover:text-gray-900"
-              viewBox="0 0 320 207"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M143.05 199.55l-136-136c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
-              />
-            </svg>
-          </a>
-          <a href="#" class="group py-2 lg:px-4 block">
-            <span class="align-middle group-hover:text-gray-900">
-              Tarjeta Artesiete
-            </span>
-            <svg
-              class="inline h-2.5 w-2.5 fill-current text-gray-500 group-hover:text-gray-900"
-              viewBox="0 0 320 207"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M143.05 199.55l-136-136c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
-              />
-            </svg>
-          </a>
+            </template>
+            <template v-slot:megaMenu>
+              <div
+                v-for="(cinemas, index) in chunkedCinemas"
+                :key="index"
+                class="w-full lg:w-1/4 px-4"
+              >
+                <div
+                  v-for="cinema in cinemas"
+                  :key="cinema.city"
+                  class="mb-4 lg:mb-6"
+                >
+                  <div class="mb-1 text-gray-800">{{ cinema.city }}</div>
+                  <router-link
+                    v-for="cine in cinema.cines"
+                    :key="cine.name"
+                    :to="cine.link"
+                    class="block my-1 capitalize font-normal tracking-normal text-xs hover:text-gray-900 hover:font-medium"
+                    >{{ cine.name }}</router-link
+                  >
+                </div>
+              </div>
+            </template>
+          </app-nav-item-mega-menu>
+          <app-nav-item-mega-menu>
+            Cartelera
+          </app-nav-item-mega-menu>
+          <app-nav-item to="">
+            Promociones
+          </app-nav-item>
+          <app-nav-item to="">
+            Grupos
+          </app-nav-item>
+          <app-nav-item-mega-menu>
+            Tu Compra
+          </app-nav-item-mega-menu>
+          <app-nav-item-mega-menu>
+            Tarjeta Artesiete
+          </app-nav-item-mega-menu>
         </div>
         <div
           class="lg:px-4 uppercase text-sm text-gray-500 tracking-widest font-extrabold"
@@ -215,11 +185,15 @@
 </template>
 
 <script>
+import AppNavItem from '../ui/AppNavItem'
+import AppNavItemMegaMenu from '../ui/AppNavItemMegaMenu'
 import LanguageSwitcher from '../LanguageSwitcher'
 
 export default {
   name: 'AppHeader',
   components: {
+    AppNavItem,
+    AppNavItemMegaMenu,
     LanguageSwitcher
   },
   data() {
@@ -227,7 +201,126 @@ export default {
       isMenuOpen: false,
       sticky: false,
       username: 'John Wick',
-      email: 'dontkillmydog@johnwick.com'
+      email: 'dontkillmydog@johnwick.com',
+      cinemas: [
+        {
+          city: 'Mallorca',
+          cines: [
+            {
+              name: 'Artesiete Fan',
+              link: ''
+            }
+          ]
+        },
+        {
+          city: 'Huelva',
+          cines: [
+            {
+              name: 'Artesiete Holea',
+              link: ''
+            }
+          ]
+        },
+        {
+          city: 'Toledo',
+          cines: [
+            {
+              name: 'Artesiete Alfares (Talavera)',
+              link: ''
+            }
+          ]
+        },
+        {
+          city: 'Las Palmas',
+          cines: [
+            {
+              name: 'Artesiete Las Terrazas',
+              link: ''
+            }
+          ]
+        },
+        {
+          city: 'Asturias',
+          cines: [
+            {
+              name: 'Artesiete Caudalia (Mieres)',
+              link: ''
+            },
+            {
+              name: 'Artesiete Nalon (El Entrego)',
+              link: ''
+            }
+          ]
+        },
+        {
+          city: 'Jaen',
+          cines: [
+            {
+              name: 'Cines Ubeda (Ubeda)',
+              link: ''
+            }
+          ]
+        },
+        {
+          city: 'Segovia',
+          cines: [
+            {
+              name: 'Artesiete Segovia',
+              link: ''
+            }
+          ]
+        },
+        {
+          city: 'Sevilla',
+          cines: [
+            {
+              name: 'Artesiete Ecija',
+              link: ''
+            }
+          ]
+        },
+        {
+          city: 'Madrid',
+          cines: [
+            {
+              name: 'Artesiete Alcala',
+              link: ''
+            }
+          ]
+        },
+        {
+          city: 'Zaragoza',
+          cines: [
+            {
+              name: 'Artesiete La Torre',
+              link: ''
+            }
+          ]
+        },
+        {
+          city: 'Cordoba',
+          cines: [
+            {
+              name: 'Artesiete Lucena',
+              link: ''
+            }
+          ]
+        },
+        {
+          city: 'Granada',
+          cines: [
+            {
+              name: 'Artesiete Alhsur',
+              link: ''
+            }
+          ]
+        }
+      ]
+    }
+  },
+  computed: {
+    chunkedCinemas() {
+      return this.chunk(this.cinemas, 3)
     }
   },
   methods: {
@@ -238,6 +331,14 @@ export default {
       } else {
         this.sticky = false
       }
+    },
+    chunk(arr, chunkSize) {
+      if (chunkSize < 0) throw 'Invalid chunk size'
+      let R = []
+      for (let i = 0, len = arr.length; i < len; i += chunkSize) {
+        R.push(arr.slice(i, i + chunkSize))
+      }
+      return R
     }
   },
   created() {
@@ -259,6 +360,6 @@ header.scrolled {
   @apply shadow-xl;
 }
 .h-custom {
-  height: 302px;
+  max-height: 80vh;
 }
 </style>
