@@ -144,7 +144,22 @@
             </template>
           </app-nav-item-mega-menu>
           <app-nav-item-mega-menu>
-            Cartelera
+            <template v-slot:default>
+              Cartelera
+            </template>
+            <template v-slot:megaMenu>
+              <div
+                v-for="billboard in billboards"
+                :key="billboard.name"
+                class="w-full mb-1 px-4 pb-3 lg:w-1/4"
+              >
+                <router-link
+                  :to="billboard.link"
+                  class="text-gray-800 hover:text-gray-900"
+                  >{{ billboard.name }}</router-link
+                >
+              </div>
+            </template>
           </app-nav-item-mega-menu>
           <app-nav-item to="">
             Promociones
@@ -202,6 +217,20 @@ export default {
       sticky: false,
       username: 'John Wick',
       email: 'dontkillmydog@johnwick.com',
+      billboards: [
+        {
+          name: 'Cartelera Completa',
+          link: ''
+        },
+        {
+          name: 'Eventos',
+          link: ''
+        },
+        {
+          name: 'Anticipadas',
+          link: ''
+        }
+      ],
       cinemas: [
         {
           city: 'Mallorca',
