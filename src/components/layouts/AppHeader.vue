@@ -116,7 +116,7 @@
           <app-nav-item to="">
             Inicio
           </app-nav-item>
-          <app-nav-item-mega-menu :mega="true">
+          <app-nav-item-mega-menu :showServices="true">
             <template v-slot:default>
               Nuestros Cines
             </template>
