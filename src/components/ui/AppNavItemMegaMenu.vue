@@ -1,7 +1,8 @@
 <template>
   <div>
     <a
-      @click="isOpen = !isOpen"
+      @click.prevent="isOpen = !isOpen"
+      v-on-clickaway="onAwayClick"
       class="group py-2 lg:px-4 block cursor-pointer"
     >
       <span
@@ -95,8 +96,11 @@
 </template>
 
 <script>
+import { mixin as clickaway } from 'vue-clickaway'
+
 export default {
   name: 'AppNavItemMegaMenu',
+  mixins: [clickaway],
   props: {
     showServices: {
       type: Boolean,
@@ -106,6 +110,11 @@ export default {
   data() {
     return {
       isOpen: false
+    }
+  },
+  methods: {
+    onAwayClick() {
+      this.isOpen = false
     }
   }
 }
