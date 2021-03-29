@@ -107,7 +107,7 @@
       </div>
       <!-- Nav Lists -->
       <div
-        :class="isMenuOpen ? 'h-custom overflow-y-scroll' : 'max-h-0'"
+        :class="isMenuOpen ? 'h-custom overflow-y-auto' : 'max-h-0'"
         class="my-2 w-full lg:max-h-80 lg:flex lg:items-center lg:justify-between overflow-hidden transition-all duration-500 ease-in-out"
       >
         <div
@@ -167,12 +167,45 @@
           <app-nav-item to="">
             Grupos
           </app-nav-item>
-          <app-nav-item-mega-menu>
-            Tu Compra
-          </app-nav-item-mega-menu>
-          <app-nav-item-mega-menu>
-            Tarjeta Artesiete
-          </app-nav-item-mega-menu>
+          <app-nav-item-dropdown>
+            <template v-slot:default>
+              Tu Compra
+            </template>
+            <template v-slot:dropdown>
+              <router-link
+                to=""
+                class="mb-2 px-4 lg:mb-0 lg:py-2 lg:hover:bg-gray-200"
+                >Comprueba Compra</router-link
+              >
+              <router-link
+                to=""
+                class="mb-2 px-4 lg:mb-0 lg:py-2 lg:hover:bg-gray-200"
+                >Acceso a la Sala</router-link
+              >
+            </template>
+          </app-nav-item-dropdown>
+          <app-nav-item-dropdown>
+            <template v-slot:default>
+              Tarjeta Artesiete
+            </template>
+            <template v-slot:dropdown>
+              <router-link
+                to=""
+                class="mb-2 px-4 lg:mb-0 lg:py-2 lg:hover:bg-gray-200"
+                >Darse de Alta</router-link
+              >
+              <router-link
+                to=""
+                class="mb-2 px-4 lg:mb-0 lg:py-2 lg:hover:bg-gray-200"
+                >Login</router-link
+              >
+              <router-link
+                to=""
+                class="mb-2 px-4 lg:mb-0 lg:py-2 lg:hover:bg-gray-200"
+                >Info Tarjeta Artesiete</router-link
+              >
+            </template>
+          </app-nav-item-dropdown>
         </div>
         <div
           class="lg:px-4 uppercase text-sm text-gray-500 tracking-widest font-extrabold"
@@ -201,6 +234,7 @@
 
 <script>
 import AppNavItem from '../ui/AppNavItem'
+import AppNavItemDropdown from '../ui/AppNavItemDropdown'
 import AppNavItemMegaMenu from '../ui/AppNavItemMegaMenu'
 import LanguageSwitcher from '../LanguageSwitcher'
 
@@ -208,6 +242,7 @@ export default {
   name: 'AppHeader',
   components: {
     AppNavItem,
+    AppNavItemDropdown,
     AppNavItemMegaMenu,
     LanguageSwitcher
   },
