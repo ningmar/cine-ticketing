@@ -1,8 +1,8 @@
 <template>
   <div>
     <a
-      @click.prevent="isOpen = !isOpen"
-      v-on-clickaway="onAwayClick"
+      @click.prevent="toggleOpen"
+      v-on-clickaway="close"
       class="group py-2 lg:px-4 block cursor-pointer"
     >
       <span
@@ -113,7 +113,10 @@ export default {
     }
   },
   methods: {
-    onAwayClick() {
+    toggleOpen() {
+      this.isOpen = !this.isOpen
+    },
+    close() {
       this.isOpen = false
     }
   }
