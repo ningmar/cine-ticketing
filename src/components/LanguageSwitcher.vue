@@ -2,6 +2,7 @@
   <div class="relative">
     <button
       @click="toggleOpen"
+      v-on-clickaway="hideDropdown"
       @keydown.esc.exact="hideDropdown"
       href="#"
       class="flex items-center focus:outline-none"
@@ -46,18 +47,15 @@
         </li>
       </ul>
     </transition>
-    <!-- Overlay to handle clickaway -->
-    <div
-      v-if="isOpen"
-      @click="hideDropdown"
-      class="h-full w-full fixed inset-0"
-    ></div>
   </div>
 </template>
 
 <script>
+import { mixin as clickaway } from 'vue-clickaway'
+
 export default {
   name: 'LanguageSwitcher',
+  mixins: [clickaway],
   data() {
     return {
       isOpen: false,
