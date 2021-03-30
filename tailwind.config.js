@@ -21,11 +21,17 @@ module.exports = {
           '"Segoe UI Symbol"',
           '"Noto Color Emoji"'
         ]
+      },
+      strokeWidth: {
+        '3': '3',
+        '4': '4'
       }
     }
   },
   variants: {
-    extend: {}
+    extend: {
+      fontWeight: ['hover', 'focus']
+    }
   },
   plugins: []
 }

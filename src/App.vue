@@ -1,19 +1,20 @@
 <template>
-  <div id="app">
+  <div id="app" class="max-w-screen-2xl mx-auto">
     <div class="container mx-auto">
-      <nav-bar />
-      <router-view />
+      <app-header></app-header>
+      <router-view></router-view>
       <app-footer></app-footer>
     </div>
   </div>
 </template>
 
 <script>
-import NavBar from './components/layouts/NavBar'
+import AppHeader from './components/layouts/AppHeader'
 import AppFooter from './components/layouts/AppFooter'
 
 export default {
-  components: { NavBar, AppFooter }
+  components: { AppHeader, AppFooter }
 }
 </script>
+
 <style></style>
