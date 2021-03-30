@@ -174,12 +174,12 @@
             <template v-slot:dropdown>
               <router-link
                 to=""
-                class="mb-2 px-4 lg:mb-0 lg:py-2 lg:hover:bg-gray-200"
+                class="mb-2 px-4 lg:mb-0 lg:py-2 lg:hover:bg-gray-100"
                 >Comprueba Compra</router-link
               >
               <router-link
                 to=""
-                class="mb-2 px-4 lg:mb-0 lg:py-2 lg:hover:bg-gray-200"
+                class="mb-2 px-4 lg:mb-0 lg:py-2 lg:hover:bg-gray-100"
                 >Acceso a la Sala</router-link
               >
             </template>
@@ -191,17 +191,17 @@
             <template v-slot:dropdown>
               <router-link
                 to=""
-                class="mb-2 px-4 lg:mb-0 lg:py-2 lg:hover:bg-gray-200"
+                class="mb-2 px-4 lg:mb-0 lg:py-2 lg:hover:bg-gray-100"
                 >Darse de Alta</router-link
               >
               <router-link
                 to=""
-                class="mb-2 px-4 lg:mb-0 lg:py-2 lg:hover:bg-gray-200"
+                class="mb-2 px-4 lg:mb-0 lg:py-2 lg:hover:bg-gray-100"
                 >Login</router-link
               >
               <router-link
                 to=""
-                class="mb-2 px-4 lg:mb-0 lg:py-2 lg:hover:bg-gray-200"
+                class="mb-2 px-4 lg:mb-0 lg:py-2 lg:hover:bg-gray-100"
                 >Info Tarjeta Artesiete</router-link
               >
             </template>

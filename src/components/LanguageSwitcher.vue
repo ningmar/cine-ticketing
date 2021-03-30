@@ -38,7 +38,7 @@
             href="#"
             @click.prevent="setLocale(locale)"
             @keydown.esc.exact="hideDropdown"
-            class="p-3 flex items-center hover:bg-gray-200 focus:bg-gray-200 focus:outline-none"
+            class="p-3 flex items-center hover:bg-gray-100 focus:bg-gray-100 focus:outline-none"
           >
             <img :src="`${publicPath}img/flag_${locale}.svg`" class="h-5 w-5" />
             <span class="ml-2">{{ getLanguage(locale) }}</span>
