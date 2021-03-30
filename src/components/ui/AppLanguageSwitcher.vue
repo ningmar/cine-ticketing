@@ -54,7 +54,7 @@
 import { mixin as clickaway } from 'vue-clickaway'
 
 export default {
-  name: 'LanguageSwitcher',
+  name: 'AppLanguageSwitcher',
   mixins: [clickaway],
   data() {
     return {

@@ -41,7 +41,7 @@
         </ul>
         <!-- Language Dropdown -->
         <div class="px-2 border-r-2">
-          <language-switcher></language-switcher>
+          <app-language-switcher></app-language-switcher>
         </div>
       </div>
     </div>
@@ -236,7 +236,7 @@
 import AppNavItem from '../ui/AppNavItem'
 import AppNavItemDropdown from '../ui/AppNavItemDropdown'
 import AppNavItemMegaMenu from '../ui/AppNavItemMegaMenu'
-import LanguageSwitcher from '../LanguageSwitcher'
+import AppLanguageSwitcher from '../ui/AppLanguageSwitcher'
 
 export default {
   name: 'AppHeader',
@@ -244,7 +244,7 @@ export default {
     AppNavItem,
     AppNavItemDropdown,
     AppNavItemMegaMenu,
-    LanguageSwitcher
+    AppLanguageSwitcher
   },
   data() {
     return {
