@@ -1,13 +1,13 @@
 <template>
-  <header class="bg-white" :class="{ scrolled: sticky }">
+  <header class="bg-white z-10" :class="{ scrolled: sticky }">
     <!-- Top Bar -->
-    <div class="bg-gray-100 p-4 text-sm text-gray-600">
+    <div class="bg-gray-50 p-4 text-sm text-gray-600">
       <div class="sm:px-4 flex justify-end sm:justify-between items-center">
         <ul class="hidden sm:flex">
           <li class="pr-4">
             <a href="#" class="flex items-center">
               <svg
-                class="w-5 h-5 mr-2 text-black"
+                class="w-5 h-5 mr-2 stroke-current stroke-4"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 64 64"
               >
@@ -29,7 +29,7 @@
                 />
               </svg>
               <span>
-                Ayuda a la compra: Click Aquí
+                Ayuda a la compra: click aquí
               </span>
             </a>
           </li>
@@ -111,7 +111,7 @@
         class="my-2 w-full lg:max-h-80 lg:flex lg:items-center lg:justify-between overflow-hidden transition-all duration-500 ease-in-out"
       >
         <div
-          class="w-full max-w-7xl mx-auto lg:flex lg:justify-between uppercase text-sm text-gray-500 tracking-widest font-extrabold"
+          class="w-full max-w-7xl mx-auto lg:flex lg:justify-between uppercase text-sm text-gray-500 tracking-widest font-bold"
         >
           <app-nav-item to="">
             Inicio
@@ -208,7 +208,7 @@
           </app-nav-item-dropdown>
         </div>
         <div
-          class="lg:px-4 uppercase text-sm text-gray-500 tracking-widest font-extrabold"
+          class="lg:px-4 uppercase text-sm text-gray-500 tracking-widest font-bold"
         >
           <a href="#" class="py-2 flex items-center">
             <svg
@@ -416,13 +416,9 @@ export default {
 
 <style scoped>
 header.scrolled {
-  /* applying all in single line gives editor error */
-  @apply fixed;
-  @apply -top-14;
-  @apply left-0;
-  @apply w-full;
-  @apply shadow-xl;
+  @apply fixed -top-14 left-0 w-full shadow-xl;
 }
+
 .h-custom {
   max-height: 80vh;
 }

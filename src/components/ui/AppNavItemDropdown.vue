@@ -26,7 +26,7 @@
     </a>
     <div
       v-if="isOpen"
-      class="mt-2 bg-white normal-case font-normal tracking-normal flex flex-col lg:absolute lg:w-44 lg:mt-4 lg:border lg:shadow-md"
+      class="mt-2 bg-white normal-case font-normal tracking-normal flex flex-col lg:absolute lg:w-44 lg:mt-4 lg:border lg:shadow-md z-10"
     >
       <slot name="dropdown"></slot>
     </div>

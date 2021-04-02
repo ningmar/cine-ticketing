@@ -25,6 +25,15 @@ module.exports = {
       strokeWidth: {
         '3': '3',
         '4': '4'
+      },
+      maxWidth: {
+        custom: '1400px'
+      },
+      letterSpacing: {
+        widest: '0.15em'
+      },
+      fontSize: {
+        sm: '0.9rem'
       }
     }
   },

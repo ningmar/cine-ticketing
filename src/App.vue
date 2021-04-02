@@ -1,6 +1,6 @@
 <template>
-  <div id="app" class="max-w-screen-2xl mx-auto">
-    <div class="container mx-auto">
+  <div id="app" class="max-w-custom mx-auto">
+    <div class="mx-auto">
       <app-header></app-header>
       <router-view></router-view>
       <app-footer></app-footer>
@@ -16,5 +16,3 @@ export default {
   components: { AppHeader, AppFooter }
 }
 </script>
-
-<style></style>
