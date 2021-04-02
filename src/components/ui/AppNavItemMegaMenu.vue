@@ -26,7 +26,7 @@
     </a>
     <div
       v-if="isOpen"
-      class="w-full bg-white mt-2 lg:absolute lg:left-0 lg:mt-6 lg:pt-12 lg:border lg:shadow-md"
+      class="w-full bg-white mt-2 lg:absolute lg:left-0 lg:mt-6 lg:pt-12 lg:border lg:shadow-md z-10"
     >
       <div class="lg:flex lg:flex-wrap lg:mb-2 lg:px-10">
         <slot name="megaMenu"></slot>

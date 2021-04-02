@@ -111,7 +111,7 @@
         class="my-2 w-full lg:max-h-80 lg:flex lg:items-center lg:justify-between overflow-hidden transition-all duration-500 ease-in-out"
       >
         <div
-          class="w-full max-w-7xl mx-auto lg:flex lg:justify-between uppercase text-sm text-gray-500 tracking-widest font-extrabold"
+          class="w-full max-w-7xl mx-auto lg:flex lg:justify-between uppercase text-sm text-gray-500 tracking-widest font-bold"
         >
           <app-nav-item to="">
             Inicio
@@ -208,7 +208,7 @@
           </app-nav-item-dropdown>
         </div>
         <div
-          class="lg:px-4 uppercase text-sm text-gray-500 tracking-widest font-extrabold"
+          class="lg:px-4 uppercase text-sm text-gray-500 tracking-widest font-bold"
         >
           <a href="#" class="py-2 flex items-center">
             <svg
