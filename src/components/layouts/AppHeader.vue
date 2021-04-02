@@ -1,13 +1,13 @@
 <template>
-  <header class="bg-white" :class="{ scrolled: sticky }">
+  <header class="bg-white z-10" :class="{ scrolled: sticky }">
     <!-- Top Bar -->
-    <div class="bg-gray-100 p-4 text-sm text-gray-600">
+    <div class="bg-gray-50 p-4 text-sm text-gray-600">
       <div class="sm:px-4 flex justify-end sm:justify-between items-center">
         <ul class="hidden sm:flex">
           <li class="pr-4">
             <a href="#" class="flex items-center">
               <svg
-                class="w-5 h-5 mr-2 text-black"
+                class="w-5 h-5 mr-2 stroke-current stroke-4"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 64 64"
               >
@@ -29,7 +29,7 @@
                 />
               </svg>
               <span>
-                Ayuda a la compra: Click Aquí
+                Ayuda a la compra: click aquí
               </span>
             </a>
           </li>
