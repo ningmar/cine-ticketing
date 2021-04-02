@@ -28,6 +28,12 @@ module.exports = {
       },
       maxWidth: {
         custom: '1400px'
+      },
+      letterSpacing: {
+        widest: '0.15em'
+      },
+      fontSize: {
+        sm: '0.9rem'
       }
     }
   },
