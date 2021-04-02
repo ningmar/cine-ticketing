@@ -416,13 +416,9 @@ export default {
 
 <style scoped>
 header.scrolled {
-  /* applying all in single line gives editor error */
-  @apply fixed;
-  @apply -top-14;
-  @apply left-0;
-  @apply w-full;
-  @apply shadow-xl;
+  @apply fixed -top-14 left-0 w-full shadow-xl;
 }
+
 .h-custom {
   max-height: 80vh;
 }
