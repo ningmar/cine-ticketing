@@ -44,7 +44,7 @@
       </vue-glide>
     </section>
     <br />
-    <section-title title="cartelera artesiete"></section-title>
+    <app-section-title>Cartelera Artesiete</app-section-title>
     <div class="flex flex-wrap max-w-6xl mx-auto">
       <app-card
         v-for="movie in featuredMovies"
@@ -59,7 +59,7 @@
 
 <script>
 import AppCard from '../components/AppCard'
-import SectionTitle from '../components/SectionTitle'
+import AppSectionTitle from '../components/ui/AppSectionTitle'
 import { Glide, GlideSlide } from 'vue-glide-js'
 import 'vue-glide-js/dist/vue-glide.css'
 
@@ -67,7 +67,7 @@ export default {
   name: 'Home',
   components: {
     AppCard,
-    SectionTitle,
+    AppSectionTitle,
     [Glide.name]: Glide,
     [GlideSlide.name]: GlideSlide
   },
