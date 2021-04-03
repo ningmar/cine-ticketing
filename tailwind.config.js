@@ -3,6 +3,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      spacing: {
+        '4.5': '1.125rem'
+      },
       fontFamily: {
         sans: [
           '"HK Grotesk"',
