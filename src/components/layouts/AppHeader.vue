@@ -7,7 +7,7 @@
           <li class="pr-4">
             <a href="#" class="flex items-center">
               <svg
-                class="w-5 h-5 mr-2 stroke-current stroke-4"
+                class="w-4.5 h-4.5 mr-2 stroke-current stroke-4"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 64 64"
               >
@@ -47,10 +47,10 @@
     </div>
 
     <!-- Main Header -->
-    <nav class="relative p-4 lg:flex lg:items-center">
+    <nav class="relative px-4 py-2 lg:py-4 lg:flex lg:items-center">
       <!-- Brand Logo Container-->
       <div class="flex items-center justify-between py-1 lg:px-4">
-        <a href="#" class="mr-4">
+        <a href="#">
           <svg
             version="1.0"
             xmlns="http://www.w3.org/2000/svg"
@@ -107,11 +107,12 @@
       </div>
       <!-- Nav Lists -->
       <div
-        :class="isMenuOpen ? 'h-custom overflow-y-auto' : 'max-h-0'"
-        class="w-full my-2 overflow-hidden transition-all duration-500 ease-in-out lg:max-h-80 lg:flex lg:items-center lg:justify-between"
+        :class="isMenuOpen ? 'overflow-y-auto h-custom' : 'max-h-0'"
+        class="w-full overflow-hidden transition-all duration-500 ease-in-out lg:max-h-80 lg:flex lg:items-center lg:justify-between"
       >
         <div
-          class="w-full mx-auto text-sm font-bold tracking-widest text-gray-500 uppercase max-w-7xl lg:flex lg:justify-between"
+          :class="isMenuOpen ? 'mb-0' : '-mb-52 lg:mb-0'"
+          class="w-full max-w-6xl mx-auto mt-2 text-sm font-bold tracking-widest text-gray-500 uppercase transition-all duration-500 ease-in-out lg:text-xs xl:text-sm lg:flex lg:justify-between"
         >
           <app-nav-item to="">
             Inicio
