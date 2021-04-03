@@ -36,7 +36,14 @@ module.exports = {
         widest: '0.15em'
       },
       fontSize: {
-        sm: '0.9rem'
+        sm: '0.9rem',
+        title: [
+          '2.7rem',
+          {
+            letterSpacing: '0.1em',
+            lineHeight: '1.1'
+          }
+        ]
       }
     }
   },
