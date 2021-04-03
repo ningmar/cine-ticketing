@@ -9,11 +9,11 @@
     >
       <img
         :src="`${publicPath}img/flag_${selectedLocale}.svg`"
-        class="w-5 h-5"
+        class="w-4.5 h-4.5"
       />
       <span class="ml-2">{{ getLanguage(selectedLocale) }}</span>
       <svg
-        class="w-5 h-5"
+        class="w-4.5 h-4.5"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
       >
