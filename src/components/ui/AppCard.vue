@@ -26,8 +26,9 @@
         <slot name="label"></slot>
       </p>
       <h3
+        style="line-height: 1.15"
         v-if="$slots.title"
-        class="flex items-center mb-1 text-sm font-bold leading-none tracking-widest"
+        class="mb-1 text-sm font-bold tracking-widest"
       >
         <slot name="title"></slot>
       </h3>
