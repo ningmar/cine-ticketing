@@ -30,7 +30,7 @@
     >
       <ul
         v-if="isOpen"
-        class="absolute z-10 w-32 mt-1 bg-white rounded shadow -right-2"
+        class="absolute z-20 w-32 mt-1 bg-white rounded shadow -right-2"
       >
         <li v-for="locale in locales" :key="locale">
           <a

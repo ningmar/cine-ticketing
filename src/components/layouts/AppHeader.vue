@@ -1,5 +1,5 @@
 <template>
-  <header class="z-10 bg-white" :class="{ scrolled: sticky }">
+  <header class="z-20 bg-white" :class="{ scrolled: sticky }">
     <!-- Top Bar -->
     <div class="p-4 text-sm text-gray-600 bg-gray-50">
       <div class="flex items-center justify-end sm:px-4 sm:justify-between">
