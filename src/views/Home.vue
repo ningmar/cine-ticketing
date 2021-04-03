@@ -11,7 +11,7 @@
         </vue-glide-slide>
         <template slot="control">
           <button
-            class="hidden xl:block absolute left-10 top-1/2 transform -translate-y-1/2 focus:outline-none"
+            class="absolute hidden transform -translate-y-1/2 xl:block left-10 top-1/2 focus:outline-none"
             data-glide-dir="<"
           >
             <svg
@@ -26,7 +26,7 @@
             </svg>
           </button>
           <button
-            class="hidden xl:block absolute right-10 top-1/2 transform -translate-y-1/2 focus:outline-none"
+            class="absolute hidden transform -translate-y-1/2 xl:block right-10 top-1/2 focus:outline-none"
             data-glide-dir=">"
           >
             <svg
@@ -45,7 +45,7 @@
     </section>
     <br />
     <section-title title="cartelera artesiete"></section-title>
-    <div class="max-w-6xl mx-auto flex flex-wrap">
+    <div class="flex flex-wrap max-w-6xl mx-auto">
       <app-card
         v-for="movie in featuredMovies"
         :key="movie.id"

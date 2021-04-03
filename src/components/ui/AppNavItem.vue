@@ -1,5 +1,5 @@
 <template>
-  <router-link :to="to" class="group py-2 lg:px-4 block">
+  <router-link :to="to" class="block py-2 group lg:px-4">
     <span class="align-middle group-hover:text-gray-900">
       <!-- pass slot to override following text -->
       <slot>Nav Item</slot>

@@ -1,12 +1,12 @@
 <template>
-  <div class="lg:w-2/12 md:w-3/12 sm:w-4/12 w-6/12 px-4">
+  <div class="w-6/12 px-4 lg:w-2/12 md:w-3/12 sm:w-4/12">
     <div class="mb-8">
       <div class="border-b-2 border-gray-600">
-        <img class="max-w-full h-auto" :src="image" />
+        <img class="h-auto max-w-full" :src="image" />
       </div>
       <div class="py-2">
         <p class="mb-1 text-xs text-gray-400">{{ category }}</p>
-        <div class="mb-1 flex">
+        <div class="flex mb-1">
           <span class="mr-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +20,7 @@
               />
             </svg>
           </span>
-          <span class="font-bold tracking-widest text-sm uppercase">{{
+          <span class="text-sm font-bold tracking-widest uppercase">{{
             name
           }}</span>
         </div>

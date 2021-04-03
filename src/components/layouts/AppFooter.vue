@@ -1,9 +1,9 @@
 <template>
   <div class="mx-auto">
     <div
-      class="flex flex-wrap bg-gray-100 px-4 py-10 md:py-17 lg:py-24 md:divide-x divide-black"
+      class="flex flex-wrap px-4 py-10 bg-gray-100 divide-black md:py-17 lg:py-24 md:divide-x"
     >
-      <div class="flex mb-6 md:mb-0 md:flex-1 justify-center items-center">
+      <div class="flex items-center justify-center mb-6 md:mb-0 md:flex-1">
         <div class="w-12 h-12 mr-6">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
             <path
@@ -27,14 +27,14 @@
           </svg>
         </div>
         <div class="text-left">
-          <h2 class="uppercase font-bold text-base mb-2">Pago Seguro</h2>
-          <p class="text-gray-400 text-xs">
+          <h2 class="mb-2 text-base font-bold uppercase">Pago Seguro</h2>
+          <p class="text-xs text-gray-400">
             Pago Seguro, Operacion realizada en Espana
           </p>
         </div>
       </div>
 
-      <div class="flex md:flex-1 justify-center items-center">
+      <div class="flex items-center justify-center md:flex-1">
         <div class="w-12 h-12 mr-6">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
             <path
@@ -85,44 +85,44 @@
           </svg>
         </div>
         <div class="text-left">
-          <h2 class="uppercase font-bold text-base mb-2">Pago Seguro</h2>
-          <p class="text-gray-400 text-xs">
+          <h2 class="mb-2 text-base font-bold uppercase">Pago Seguro</h2>
+          <p class="text-xs text-gray-400">
             Pago Seguro, Operacion realizada en Espana
           </p>
         </div>
       </div>
     </div>
     <!-- for main footer section -->
-    <div class="bg-gray-200 py-10 md:py-15 lg:py-20">
+    <div class="py-10 bg-gray-200 md:py-15 lg:py-20">
       <div class="flex flex-wrap px-4 lg:mx-36 md:mx-10">
         <div class="w-full lg:w-1/3">
           <h3
-            class="text-gray-900 uppercase text-base tracking-widest font-bold my-4"
+            class="my-4 text-base font-bold tracking-widest text-gray-900 uppercase"
           >
             Artesiete cines
           </h3>
         </div>
         <div class="w-full md:w-1/2 lg:w-1/3">
-          <h3 class="text-gray-900 uppercase text-base tracking-widest my-4">
+          <h3 class="my-4 text-base tracking-widest text-gray-900 uppercase">
             Nuestra Empres
           </h3>
           <a
             v-for="(link, index) in footerLinks"
             :key="index"
             :href="link.link"
-            class="block text-sm leading-6 hover:underline text-gray-400"
+            class="block text-sm leading-6 text-gray-400 hover:underline"
             >{{ link.label }}</a
           >
         </div>
         <div class="w-full md:w-1/2 lg:w-1/3">
-          <h3 class="text-gray-900 uppercase text-base tracking-widest my-4">
+          <h3 class="my-4 text-base tracking-widest text-gray-900 uppercase">
             Nuestra Empres
           </h3>
           <a
             v-for="(link, index) in footerLinks"
             :key="`${index}-${index}`"
             :href="link.link"
-            class="block text-sm leading-6 hover:underline text-gray-400"
+            class="block text-sm leading-6 text-gray-400 hover:underline"
             >{{ link.label }}</a
           >
         </div>
@@ -130,7 +130,7 @@
     </div>
 
     <!-- for bottom footer section -->
-    <div class="bg-gray-800 py-3 md:py-6">
+    <div class="py-3 bg-gray-800 md:py-6">
       <div class="flex flex-wrap px-4 lg:mx-36 md:mx-10">
         <div class="md:flex-1">
           <p class="text-sm text-gray-300">
