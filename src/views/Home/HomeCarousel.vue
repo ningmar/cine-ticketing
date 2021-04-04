@@ -85,3 +85,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+::v-deep .glide__bullets {
+  @apply xl:hidden;
+}
+</style>
