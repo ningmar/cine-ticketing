@@ -12,13 +12,13 @@
       <div
         class="absolute inset-0 flex items-center justify-center transition-all duration-500 bg-white opacity-0 bg-opacity-90 hover:opacity-100"
       >
-        <a
+        <button
           @click.prevent=""
           style="letter-spacing: 0.3em"
           class="flex items-center h-10 px-8 mx-2 text-xs font-bold leading-10 text-center text-white uppercase transition-all duration-300 bg-gray-700 cursor-pointer trac hover:bg-gray-800 "
         >
           <slot name="action">Action</slot>
-        </a>
+        </button>
       </div>
     </div>
     <div class="py-2">
