@@ -112,7 +112,7 @@
       >
         <div
           :class="isMenuOpen ? 'mb-0' : '-mb-52 lg:mb-0'"
-          class="w-full max-w-6xl mx-auto mt-2 text-sm font-bold tracking-widest text-gray-500 uppercase transition-all duration-500 ease-in-out lg:text-xs xl:text-sm lg:flex lg:justify-between"
+          class="w-full max-w-6xl mx-auto mt-2 text-sm font-bold text-gray-500 uppercase transition-all duration-500 ease-in-out tracking-extrawide lg:text-xs xl:text-sm lg:flex lg:justify-between"
         >
           <app-nav-item to="/">
             Inicio
@@ -209,7 +209,7 @@
           </app-nav-item-dropdown>
         </div>
         <div
-          class="text-sm font-bold tracking-widest text-gray-500 uppercase lg:px-4"
+          class="text-sm font-bold text-gray-500 uppercase tracking-extrawide lg:px-4"
         >
           <a href="#" class="flex items-center py-2">
             <svg

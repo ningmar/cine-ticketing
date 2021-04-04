@@ -28,7 +28,7 @@
       <h3
         style="line-height: 1.15"
         v-if="$slots.title"
-        class="mb-1 text-sm font-bold tracking-widest"
+        class="mb-1 text-sm font-bold tracking-extrawide"
       >
         <slot name="title"></slot>
       </h3>
