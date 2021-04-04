@@ -45,15 +45,8 @@
 </template>
 
 <script>
-import { Glide, GlideSlide } from 'vue-glide-js'
-import 'vue-glide-js/dist/vue-glide.css'
-
 export default {
   name: 'HomeCarousel',
-  components: {
-    [Glide.name]: Glide,
-    [GlideSlide.name]: GlideSlide
-  },
   data() {
     return {
       glideOptions: {
@@ -92,60 +85,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-::v-deep .glide__slide--active {
-  z-index: 1;
-}
-
-::v-deep .glide__bullets {
-  @apply xl:hidden;
-
-  position: absolute;
-  z-index: 2;
-  bottom: 20px;
-  left: 50%;
-  list-style: none;
-  transform: translateX(-50%);
-}
-
-::v-deep .glide__bullet {
-  background-color: #dee2e6;
-  width: 8px;
-  height: 8px;
-  backface-visibility: visible;
-  border-radius: 30px;
-  cursor: pointer;
-  margin: 0 5px;
-}
-
-::v-deep .glide__bullet:focus {
-  outline: none;
-}
-
-::v-deep .glide__bullet:hover,
-.glide__bullet:focus {
-  background-color: #343a40;
-}
-
-::v-deep .glide__bullet--active,
-::v-deep .glide__bullet--active:hover {
-  width: 12px;
-  height: 12px;
-  top: 2px;
-  position: relative;
-  background-color: #fff;
-}
-
-::v-deep .glide--swipeable {
-  cursor: grab;
-  cursor: -moz-grab;
-  cursor: -webkit-grab;
-}
-
-::v-deep .glide--dragging {
-  cursor: grabbing;
-  cursor: -moz-grabbing;
-  cursor: -webkit-grabbing;
-}
-</style>

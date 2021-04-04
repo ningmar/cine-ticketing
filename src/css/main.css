@@ -2,3 +2,58 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.glide__slide--active {
+  z-index: 1;
+}
+
+.glide__bullets {
+  @apply xl:hidden;
+
+  position: absolute;
+  z-index: 2;
+  bottom: 20px;
+  left: 50%;
+  list-style: none;
+  transform: translateX(-50%);
+}
+
+.glide__bullet {
+  background-color: #dee2e6;
+  width: 8px;
+  height: 8px;
+  backface-visibility: visible;
+  border-radius: 30px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.glide__bullet:focus {
+  outline: none;
+}
+
+.glide__bullet:hover,
+.glide__bullet:focus {
+  background-color: #343a40;
+}
+
+.glide__bullet--active,
+.glide__bullet--active:hover {
+  width: 12px;
+  height: 12px;
+  top: 2px;
+  position: relative;
+  background-color: #fff;
+}
+
+.glide--swipeable {
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+
+.glide--dragging {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
