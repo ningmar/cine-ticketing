@@ -1,7 +1,7 @@
 <template>
-  <section>
+  <section class="px-1">
     <app-section-title>Cartelera Artesiete</app-section-title>
-    <div class="flex flex-wrap px-1">
+    <div class="flex flex-wrap">
       <div
         class="w-1/2 px-4 md:w-1/4 lg:w-1/6 sm:w-1/3"
         v-for="movie in billboards"
