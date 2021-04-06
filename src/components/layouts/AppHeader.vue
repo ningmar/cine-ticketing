@@ -71,11 +71,11 @@
         <!-- Mobile menu button-->
         <div class="lg:hidden">
           <button
-            @click="isMenuOpen = !isMenuOpen"
             type="button"
             class="inline-flex items-center justify-center p-2 text-gray-400 rounded-md focus:outline-none"
             aria-controls="mobile-menu"
             aria-expanded="false"
+            @click="isMenuOpen = !isMenuOpen"
           >
             <span class="sr-only">Open main menu</span>
             <!-- Menu Icon -->
@@ -117,18 +117,18 @@
           <app-nav-item to="/">
             Inicio
           </app-nav-item>
-          <app-nav-item-mega-menu :showServices="true">
+          <app-nav-item-mega-menu :show-services="true">
             <template v-slot:default>
               Nuestros Cines
             </template>
             <template v-slot:megaMenu>
               <div
-                v-for="(cinemas, index) in chunkedCinemas"
+                v-for="(cinemaItems, index) in chunkedCinemas"
                 :key="index"
                 class="w-full px-4 lg:w-1/4"
               >
                 <div
-                  v-for="cinema in cinemas"
+                  v-for="cinema in cinemaItems"
                   :key="cinema.city"
                   class="mb-4 lg:mb-6"
                 >
@@ -388,6 +388,13 @@ export default {
       return this.chunk(this.cinemas, 3)
     }
   },
+
+  created() {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll)
+  },
   methods: {
     handleScroll() {
       // 56 is height of top bar including padding
@@ -405,12 +412,6 @@ export default {
       }
       return R
     }
-  },
-  created() {
-    window.addEventListener('scroll', this.handleScroll)
-  },
-  beforeDestroy() {
-    window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>

@@ -1,11 +1,11 @@
 <template>
   <div class="relative">
     <button
-      @click="toggleOpen"
       v-on-clickaway="hideDropdown"
-      @keydown.esc.exact="hideDropdown"
       href="#"
       class="flex items-center focus:outline-none"
+      @click="toggleOpen"
+      @keydown.esc.exact="hideDropdown"
     >
       <img
         :src="`${publicPath}img/flag_${selectedLocale}.svg`"
@@ -35,9 +35,9 @@
         <li v-for="locale in locales" :key="locale">
           <a
             href="#"
+            class="flex items-center p-3 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none"
             @click.prevent="setLocale(locale)"
             @keydown.esc.exact="hideDropdown"
-            class="flex items-center p-3 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none"
           >
             <img :src="`${publicPath}img/flag_${locale}.svg`" class="w-5 h-5" />
             <span class="ml-2">{{ getLanguage(locale) }}</span>

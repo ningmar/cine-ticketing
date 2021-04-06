@@ -1,9 +1,9 @@
 <template>
   <div>
     <a
-      @click.prevent="toggleOpen"
       v-on-clickaway="close"
       class="block py-2 cursor-pointer group lg:px-4"
+      @click.prevent="toggleOpen"
     >
       <span
         class="align-middle group-hover:text-gray-900"
