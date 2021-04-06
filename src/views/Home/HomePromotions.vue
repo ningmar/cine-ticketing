@@ -3,14 +3,16 @@
     <app-section-title>Promotions</app-section-title>
     <vue-glide
       v-if="promotions.length > 0"
+      ref="promotions"
       v-model="activeIndex"
       class="w-11/12 mx-auto"
       :options="glideOptions"
+      @glide:resize="onResize"
     >
       <vue-glide-slide
-        class="sm:px-2"
         v-for="promotion in promotions"
         :key="promotion.id"
+        class="sm:px-2"
       >
         <app-card>
           <template #image>
@@ -95,7 +97,7 @@ export default {
   computed: {
     glideOptions() {
       return {
-        autoplay: this.promotions.length > 5 ? 2000 : false,
+        autoplay: this.promotions.length > 5 ? 4000 : false,
         gap: 0,
         perView: 5,
         bound: true,
@@ -104,18 +106,25 @@ export default {
         breakpoints: {
           640: {
             perView: 1,
-            autoplay: this.promotions.length > 1 ? 2000 : false
+            autoplay: this.promotions.length > 1 ? 4000 : false
           },
           768: {
             perView: 2,
-            autoplay: this.promotions.length > 2 ? 2000 : false
+            autoplay: this.promotions.length > 2 ? 4000 : false
           },
           1024: {
             perView: 3,
-            autoplay: this.promotions.length > 3 ? 2000 : false
+            autoplay: this.promotions.length > 3 ? 4000 : false
           }
         }
       }
+    }
+  },
+  methods: {
+    onResize() {
+      this.$refs.promotions.glide.pause()
+      this.$refs.promotions.glide.go('<<')
+      this.$refs.promotions.glide.play()
     }
   }
 }
