@@ -4,6 +4,7 @@
     <br />
     <home-billboard></home-billboard>
     <home-promotions></home-promotions>
+    <home-next-releases></home-next-releases>
   </div>
 </template>
 
@@ -11,13 +12,15 @@
 import HomeBillboard from './HomeBillboard'
 import HomeCarousel from './HomeCarousel'
 import HomePromotions from './HomePromotions'
+import HomeNextReleases from './HomeNextReleases'
 
 export default {
   name: 'Home',
   components: {
     HomeBillboard,
     HomeCarousel,
-    HomePromotions
+    HomePromotions,
+    HomeNextReleases
   }
 }
 </script>
