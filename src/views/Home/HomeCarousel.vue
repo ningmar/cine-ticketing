@@ -1,17 +1,12 @@
 <template>
   <section>
-    <vue-glide
-      v-if="carouselItems.length > 0"
-      :options="glideOptions"
-      :bullet="true"
-    >
-      <vue-glide-slide v-for="item in carouselItems" :key="item.id">
+    <div v-if="carouselItems.length > 0" class="slide-container">
+      <div v-for="item in carouselItems" :key="item.id" class="slide">
         <img :src="item.image" :alt="item.name" />
-      </vue-glide-slide>
-      <template slot="control">
+      </div>
+      <template class="control">
         <button
           class="absolute hidden transform -translate-y-1/2 xl:block left-10 top-1/2 focus:outline-none"
-          data-glide-dir="<"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +21,6 @@
         </button>
         <button
           class="absolute hidden transform -translate-y-1/2 xl:block right-10 top-1/2 focus:outline-none"
-          data-glide-dir=">"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +34,7 @@
           </svg>
         </button>
       </template>
-    </vue-glide>
+    </div>
   </section>
 </template>
 
@@ -49,16 +43,6 @@ export default {
   name: 'HomeCarousel',
   data() {
     return {
-      glideOptions: {
-        autoplay: 4000,
-        animationDuration: 500,
-        animationTimingFunc: 'ease-in-out',
-        bound: false,
-        gap: 0,
-        perView: 1,
-        type: 'carousel',
-        dragThreshold: 10
-      },
       carouselItems: [
         {
           id: 1,
@@ -85,9 +69,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-::v-deep .glide__bullets {
-  @apply xl:hidden;
-}
-</style>

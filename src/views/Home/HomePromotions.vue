@@ -1,18 +1,11 @@
 <template>
   <section class="px-1 mb-12">
     <app-section-title>Promotions</app-section-title>
-    <vue-glide
-      v-if="promotions.length > 0"
-      ref="promotions"
-      v-model="activeIndex"
-      class="w-11/12 mx-auto"
-      :options="glideOptions"
-      @glide:resize="onResize"
-    >
-      <vue-glide-slide
+    <div v-if="promotions.length > 0" class="w-11/12 mx-auto slide-container">
+      <div
         v-for="promotion in promotions"
         :key="promotion.id"
-        class="sm:px-2"
+        class="slide sm:px-2"
       >
         <app-card>
           <template #image>
@@ -36,8 +29,8 @@
           </template>
           <template #label>{{ promotion.description }}</template>
         </app-card>
-      </vue-glide-slide>
-    </vue-glide>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -53,7 +46,6 @@ export default {
   },
   data() {
     return {
-      activeIndex: 0,
       promotions: [
         {
           id: 1,
@@ -93,53 +85,6 @@ export default {
         }
       ]
     }
-  },
-  computed: {
-    glideOptions() {
-      return {
-        autoplay: this.promotions.length > 5 ? 4000 : false,
-        gap: 0,
-        perView: 5,
-        bound: true,
-        rewind: false,
-        animationDuration: 500,
-        breakpoints: {
-          640: {
-            perView: 1,
-            autoplay: this.promotions.length > 1 ? 4000 : false
-          },
-          768: {
-            perView: 2,
-            autoplay: this.promotions.length > 2 ? 4000 : false
-          },
-          1024: {
-            perView: 3,
-            autoplay: this.promotions.length > 3 ? 4000 : false
-          }
-        }
-      }
-    }
-  },
-  methods: {
-    onResize() {
-      this.$refs.promotions.glide.pause()
-      this.$refs.promotions.glide.go('<<')
-      this.$refs.promotions.glide.play()
-    }
   }
 }
 </script>
-
-<style scoped>
-::v-deep .glide__bullets {
-  bottom: 0;
-}
-
-::v-deep .glide__bullet.glide__bullet--active {
-  width: 8px;
-  height: 8px;
-  top: 0;
-
-  @apply bg-gray-600;
-}
-</style>
