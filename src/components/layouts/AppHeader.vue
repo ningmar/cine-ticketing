@@ -388,7 +388,6 @@ export default {
       return this.chunk(this.cinemas, 3)
     }
   },
-
   created() {
     window.addEventListener('scroll', this.handleScroll)
   },
