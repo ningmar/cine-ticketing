@@ -100,7 +100,7 @@ export default {
 
 <style scoped>
 ::v-deep .cine-swiper-bullet {
-  @apply inline-block mx-1 w-2 h-2 rounded-full bg-gray-300 cursor-pointer;
+  @apply inline-block mx-1 w-2 h-2 rounded-full bg-gray-300 hover:bg-gray-700 cursor-pointer;
 }
 
 ::v-deep .cine-swiper-bullet:only-child {
