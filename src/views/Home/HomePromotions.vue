@@ -1,11 +1,18 @@
 <template>
   <section class="px-1 mb-12">
     <app-section-title>Promotions</app-section-title>
-    <div v-if="promotions.length > 0" class="w-11/12 mx-auto slide-container">
-      <div
+    <swiper
+      v-if="promotions.length > 0"
+      ref="swiper"
+      :options="swiperOption"
+      class="w-11/12 mx-auto"
+      @mouseover.native="stopAutoplay"
+      @mouseleave.native="startAutoplay"
+    >
+      <swiper-slide
         v-for="promotion in promotions"
         :key="promotion.id"
-        class="slide sm:px-2"
+        class="px-1 sm:px-2"
       >
         <app-card>
           <template #image>
@@ -29,8 +36,13 @@
           </template>
           <template #label>{{ promotion.description }}</template>
         </app-card>
-      </div>
-    </div>
+      </swiper-slide>
+      <div
+        id="promotion-pagination"
+        slot="pagination"
+        class="swiper-pagination"
+      ></div>
+    </swiper>
   </section>
 </template>
 
@@ -46,6 +58,30 @@ export default {
   },
   data() {
     return {
+      swiperOption: {
+        autoplay: {
+          disableOnInteraction: false
+        },
+        grabCursor: true,
+        slidesPerView: 1,
+        breakpoints: {
+          1024: {
+            slidesPerView: 5
+          },
+          768: {
+            slidesPerView: 3
+          },
+          500: {
+            slidesPerView: 2
+          }
+        },
+        pagination: {
+          el: '#promotion-pagination',
+          clickable: true,
+          bulletClass: 'cine-swiper-bullet',
+          bulletActiveClass: 'cine-swiper-bullet-active'
+        }
+      },
       promotions: [
         {
           id: 1,
@@ -85,6 +121,28 @@ export default {
         }
       ]
     }
+  },
+  methods: {
+    startAutoplay() {
+      this.$refs.swiper.$swiper.autoplay.start()
+    },
+    stopAutoplay() {
+      this.$refs.swiper.$swiper.autoplay.stop()
+    }
   }
 }
 </script>
+
+<style scoped>
+::v-deep .cine-swiper-bullet {
+  @apply inline-block mx-1 w-2 h-2 rounded-full bg-gray-300 cursor-pointer;
+}
+
+::v-deep .cine-swiper-bullet:only-child {
+  @apply hidden;
+}
+
+::v-deep .cine-swiper-bullet-active {
+  @apply bg-gray-700;
+}
+</style>
