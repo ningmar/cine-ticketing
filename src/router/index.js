@@ -37,9 +37,26 @@ const routes = [
   },
   {
     path: '/registro',
-    name: 'Register',
     component: () =>
-      import(/* webpackChunkName: "registro" */ '@/views/Register.vue')
+      import(/* webpackChunkName: "registro" */ '@/views/Register'),
+    children: [
+      {
+        path: '',
+        name: 'register',
+        component: () =>
+          import(
+            /* webpackChunkName: "registro" */ '@/views/Register/RegisterCard'
+          )
+      },
+      {
+        path: '/registro-solo-pass',
+        name: 'register-solo-pass',
+        component: () =>
+          import(
+            /* webpackChunkName: "registro" */ '@/views/Register/RegisterPassword'
+          )
+      }
+    ]
   }
 ]
 
