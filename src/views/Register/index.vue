@@ -1,6 +1,6 @@
 <template>
   <div>
-    <register-carousel></register-carousel>
+    <register-carousel v-if="$route.path === '/registro'"></register-carousel>
     <div class="max-w-6xl mx-auto">
       <section class="px-4 mb-12 text-center">
         <ul class="py-8 text-xs">
