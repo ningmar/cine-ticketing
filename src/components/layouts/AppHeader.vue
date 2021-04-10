@@ -50,7 +50,7 @@
     <nav class="relative px-4 py-2 lg:py-4 lg:flex lg:items-center">
       <!-- Brand Logo Container-->
       <div class="flex items-center justify-between py-1 lg:px-4">
-        <a href="#">
+        <router-link :to="{ name: 'home' }">
           <svg
             version="1.0"
             xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +67,7 @@
               />
             </g>
           </svg>
-        </a>
+        </router-link>
         <!-- Mobile menu button-->
         <div class="lg:hidden">
           <button
@@ -114,7 +114,7 @@
           :class="isMenuOpen ? 'mb-0' : '-mb-52 lg:mb-0'"
           class="w-full max-w-6xl mx-auto mt-2 text-sm font-bold text-gray-500 uppercase transition-all duration-500 ease-in-out tracking-extrawide lg:text-xs xl:text-sm lg:flex lg:justify-between"
         >
-          <app-nav-item to="/">
+          <app-nav-item :to="{ name: 'home' }">
             Inicio
           </app-nav-item>
           <app-nav-item-mega-menu :show-services="true">
@@ -174,12 +174,12 @@
             </template>
             <template v-slot:dropdown>
               <router-link
-                to=""
+                :to="{ name: 'check-purchase' }"
                 class="px-4 mb-2 lg:mb-0 lg:py-2 lg:hover:bg-gray-100"
                 >Comprueba Compra</router-link
               >
               <router-link
-                to=""
+                :to="{ name: 'access-room' }"
                 class="px-4 mb-2 lg:mb-0 lg:py-2 lg:hover:bg-gray-100"
                 >Acceso a la Sala</router-link
               >

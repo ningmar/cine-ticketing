@@ -128,14 +128,20 @@
             </h6>
             <ul class="mb-4 text-sm text-gray-400">
               <li>
-                <router-link class="hover:underline" to="/comprueba"
-                  >Comprueba Compra</router-link
+                <router-link
+                  class="hover:underline"
+                  :to="{ name: 'check-purchase' }"
                 >
+                  Comprueba Compra
+                </router-link>
               </li>
               <li>
-                <router-link class="hover:underline" to="/acceso"
-                  >Acceso a la Sala</router-link
+                <router-link
+                  class="hover:underline"
+                  :to="{ name: 'access-room' }"
                 >
+                  Acceso a la Sala
+                </router-link>
               </li>
               <li>
                 <router-link class="hover:underline" to="/contacto"
