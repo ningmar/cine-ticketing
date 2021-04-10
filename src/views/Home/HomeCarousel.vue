@@ -5,7 +5,7 @@
         <img :src="item.image" :alt="item.name" />
       </swiper-slide>
       <div
-        id="carousel-prev"
+        id="home-carousel-prev"
         slot="button-prev"
         class="absolute z-10 hidden transform -translate-y-1/2 xl:block left-10 top-1/2 focus:outline-none"
       >
@@ -21,7 +21,7 @@
         </svg>
       </div>
       <div
-        id="carousel-next"
+        id="home-carousel-next"
         slot="button-next"
         class="absolute z-10 hidden transform -translate-y-1/2 xl:block right-10 top-1/2 focus:outline-none"
       >
@@ -37,7 +37,7 @@
         </svg>
       </div>
       <div
-        id="carousel-pagination"
+        id="home-carousel-pagination"
         slot="pagination"
         class="xl:hidden swiper-pagination"
       ></div>
@@ -60,11 +60,11 @@ export default {
         slidesPerView: 1,
         speed: 600,
         navigation: {
-          nextEl: '#carousel-next',
-          prevEl: '#carousel-prev'
+          nextEl: '#home-carousel-next',
+          prevEl: '#home-carousel-prev'
         },
         pagination: {
-          el: '#carousel-pagination',
+          el: '#home-carousel-pagination',
           clickable: true,
           bulletClass: 'cine-swiper-bullet',
           bulletActiveClass: 'cine-swiper-bullet-active'
