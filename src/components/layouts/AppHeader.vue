@@ -191,7 +191,7 @@
             </template>
             <template v-slot:dropdown>
               <router-link
-                to=""
+                :to="{ name: 'register' }"
                 class="px-4 mb-2 lg:mb-0 lg:py-2 lg:hover:bg-gray-100"
                 >Darse de Alta</router-link
               >
