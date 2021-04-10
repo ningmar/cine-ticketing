@@ -18,7 +18,7 @@
         Utilice este formulario para comprobar el estado de su compra y/o
         obtener una copia de su comprobante.
       </h3>
-      <div class="flex flex-wrap py-4 md:px-6 lg:px-0">
+      <div class="flex flex-wrap py-4 md:px-6 xl:px-0">
         <div class="w-full px-4 md:w-3/5">
           <form>
             <app-input
