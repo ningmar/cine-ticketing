@@ -41,7 +41,7 @@ const routes = [
       import(/* webpackChunkName: "registro" */ '@/views/Register'),
     children: [
       {
-        path: '',
+        path: '/registro',
         name: 'register',
         component: () =>
           import(
