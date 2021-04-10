@@ -1,13 +1,13 @@
 <template>
-  <header class="bg-white" :class="{ scrolled: sticky }">
+  <header class="z-20 bg-white" :class="{ scrolled: sticky }">
     <!-- Top Bar -->
-    <div class="bg-gray-100 p-4 text-sm text-gray-600">
-      <div class="sm:px-4 flex justify-end sm:justify-between items-center">
+    <div class="p-4 text-sm text-gray-600 bg-gray-50">
+      <div class="flex items-center justify-end sm:px-4 sm:justify-between">
         <ul class="hidden sm:flex">
           <li class="pr-4">
             <a href="#" class="flex items-center">
               <svg
-                class="w-5 h-5 mr-2 text-black"
+                class="w-4.5 h-4.5 mr-2 stroke-current stroke-4"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 64 64"
               >
@@ -29,7 +29,7 @@
                 />
               </svg>
               <span>
-                Ayuda a la compra: Click Aquí
+                Ayuda a la compra: click aquí
               </span>
             </a>
           </li>
@@ -47,10 +47,10 @@
     </div>
 
     <!-- Main Header -->
-    <nav class="p-4 lg:flex lg:items-center relative">
+    <nav class="relative px-4 py-2 lg:py-4 lg:flex lg:items-center">
       <!-- Brand Logo Container-->
-      <div class="py-1 lg:px-4 flex justify-between items-center">
-        <a href="#" class="mr-4">
+      <div class="flex items-center justify-between py-1 lg:px-4">
+        <a href="#">
           <svg
             version="1.0"
             xmlns="http://www.w3.org/2000/svg"
@@ -71,16 +71,16 @@
         <!-- Mobile menu button-->
         <div class="lg:hidden">
           <button
-            @click="isMenuOpen = !isMenuOpen"
             type="button"
-            class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 focus:outline-none"
+            class="inline-flex items-center justify-center p-2 text-gray-400 rounded-md focus:outline-none"
             aria-controls="mobile-menu"
             aria-expanded="false"
+            @click="isMenuOpen = !isMenuOpen"
           >
             <span class="sr-only">Open main menu</span>
             <!-- Menu Icon -->
             <svg
-              class="h-6 w-6"
+              class="w-6 h-6"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -107,27 +107,28 @@
       </div>
       <!-- Nav Lists -->
       <div
-        :class="isMenuOpen ? 'h-custom overflow-y-auto' : 'max-h-0'"
-        class="my-2 w-full lg:max-h-80 lg:flex lg:items-center lg:justify-between overflow-hidden transition-all duration-500 ease-in-out"
+        :class="isMenuOpen ? 'overflow-y-auto h-custom' : 'max-h-0'"
+        class="w-full overflow-hidden transition-all duration-500 ease-in-out lg:max-h-80 lg:flex lg:items-center lg:justify-between"
       >
         <div
-          class="w-full max-w-7xl mx-auto lg:flex lg:justify-between uppercase text-sm text-gray-500 tracking-widest font-extrabold"
+          :class="isMenuOpen ? 'mb-0' : '-mb-52 lg:mb-0'"
+          class="w-full max-w-6xl mx-auto mt-2 text-sm font-bold text-gray-500 uppercase transition-all duration-500 ease-in-out tracking-extrawide lg:text-xs xl:text-sm lg:flex lg:justify-between"
         >
-          <app-nav-item to="">
+          <app-nav-item to="/">
             Inicio
           </app-nav-item>
-          <app-nav-item-mega-menu :showServices="true">
+          <app-nav-item-mega-menu :show-services="true">
             <template v-slot:default>
               Nuestros Cines
             </template>
             <template v-slot:megaMenu>
               <div
-                v-for="(cinemas, index) in chunkedCinemas"
+                v-for="(cinemaItems, index) in chunkedCinemas"
                 :key="index"
-                class="w-full lg:w-1/4 px-4"
+                class="w-full px-4 lg:w-1/4"
               >
                 <div
-                  v-for="cinema in cinemas"
+                  v-for="cinema in cinemaItems"
                   :key="cinema.city"
                   class="mb-4 lg:mb-6"
                 >
@@ -136,7 +137,7 @@
                     v-for="cine in cinema.cines"
                     :key="cine.name"
                     :to="cine.link"
-                    class="block my-1 capitalize font-normal tracking-normal text-xs hover:text-gray-900 hover:font-medium"
+                    class="block my-1 text-xs font-normal tracking-normal capitalize hover:text-gray-900 hover:font-medium"
                     >{{ cine.name }}</router-link
                   >
                 </div>
@@ -151,7 +152,7 @@
               <div
                 v-for="billboard in billboards"
                 :key="billboard.name"
-                class="w-full mb-1 px-4 pb-3 lg:w-1/4"
+                class="w-full px-4 pb-3 mb-1 lg:w-1/4"
               >
                 <router-link
                   :to="billboard.link"
@@ -161,10 +162,10 @@
               </div>
             </template>
           </app-nav-item-mega-menu>
-          <app-nav-item to="">
+          <app-nav-item to="/promociones">
             Promociones
           </app-nav-item>
-          <app-nav-item to="">
+          <app-nav-item to="/grupos">
             Grupos
           </app-nav-item>
           <app-nav-item-dropdown>
@@ -174,12 +175,12 @@
             <template v-slot:dropdown>
               <router-link
                 to=""
-                class="mb-2 px-4 lg:mb-0 lg:py-2 lg:hover:bg-gray-100"
+                class="px-4 mb-2 lg:mb-0 lg:py-2 lg:hover:bg-gray-100"
                 >Comprueba Compra</router-link
               >
               <router-link
                 to=""
-                class="mb-2 px-4 lg:mb-0 lg:py-2 lg:hover:bg-gray-100"
+                class="px-4 mb-2 lg:mb-0 lg:py-2 lg:hover:bg-gray-100"
                 >Acceso a la Sala</router-link
               >
             </template>
@@ -191,28 +192,28 @@
             <template v-slot:dropdown>
               <router-link
                 to=""
-                class="mb-2 px-4 lg:mb-0 lg:py-2 lg:hover:bg-gray-100"
+                class="px-4 mb-2 lg:mb-0 lg:py-2 lg:hover:bg-gray-100"
                 >Darse de Alta</router-link
               >
               <router-link
                 to=""
-                class="mb-2 px-4 lg:mb-0 lg:py-2 lg:hover:bg-gray-100"
+                class="px-4 mb-2 lg:mb-0 lg:py-2 lg:hover:bg-gray-100"
                 >Login</router-link
               >
               <router-link
                 to=""
-                class="mb-2 px-4 lg:mb-0 lg:py-2 lg:hover:bg-gray-100"
+                class="px-4 mb-2 lg:mb-0 lg:py-2 lg:hover:bg-gray-100"
                 >Info Tarjeta Artesiete</router-link
               >
             </template>
           </app-nav-item-dropdown>
         </div>
         <div
-          class="lg:px-4 uppercase text-sm text-gray-500 tracking-widest font-extrabold"
+          class="text-sm font-bold text-gray-500 uppercase tracking-extrawide lg:px-4"
         >
-          <a href="#" class="py-2 flex items-center">
+          <a href="#" class="flex items-center py-2">
             <svg
-              class="h-6 w-6 mr-2 lg:mr-0 stroke-current stroke-3 text-gray-900"
+              class="w-6 h-6 mr-2 text-gray-900 stroke-current lg:mr-0 stroke-3"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 64 64"
             >
@@ -387,6 +388,12 @@ export default {
       return this.chunk(this.cinemas, 3)
     }
   },
+  created() {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll)
+  },
   methods: {
     handleScroll() {
       // 56 is height of top bar including padding
@@ -404,25 +411,15 @@ export default {
       }
       return R
     }
-  },
-  created() {
-    window.addEventListener('scroll', this.handleScroll)
-  },
-  beforeDestroy() {
-    window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>
 
 <style scoped>
 header.scrolled {
-  /* applying all in single line gives editor error */
-  @apply fixed;
-  @apply -top-14;
-  @apply left-0;
-  @apply w-full;
-  @apply shadow-xl;
+  @apply fixed -top-14 left-0 w-full shadow-xl;
 }
+
 .h-custom {
   max-height: 80vh;
 }

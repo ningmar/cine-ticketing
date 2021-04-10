@@ -1,9 +1,9 @@
 <template>
   <div>
     <a
-      @click.prevent="toggleOpen"
       v-on-clickaway="close"
-      class="group py-2 lg:px-4 block cursor-pointer"
+      class="block py-2 cursor-pointer group lg:px-4"
+      @click.prevent="toggleOpen"
     >
       <span
         class="align-middle group-hover:text-gray-900"
@@ -26,15 +26,15 @@
     </a>
     <div
       v-if="isOpen"
-      class="w-full bg-white mt-2 lg:absolute lg:left-0 lg:mt-6 lg:pt-12 lg:border lg:shadow-md"
+      class="z-10 w-full mt-2 bg-white lg:absolute lg:left-0 lg:mt-6 lg:pt-12 lg:border lg:shadow-md"
     >
       <div class="lg:flex lg:flex-wrap lg:mb-2 lg:px-10">
         <slot name="megaMenu"></slot>
       </div>
-      <div v-if="showServices" class="py-4 px-12 bg-gray-100 hidden lg:flex">
-        <div class="w-1/2 my-4 flex justify-center items-center">
+      <div v-if="showServices" class="hidden px-12 py-4 bg-gray-100 lg:flex">
+        <div class="flex items-center justify-center w-1/2 my-4">
           <svg
-            class="w-7 h-7 mr-4 stroke-current stroke-3 text-gray-900"
+            class="mr-4 text-gray-900 stroke-current w-7 h-7 stroke-3"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 64 64"
           >
@@ -63,14 +63,14 @@
             <h6 class="mb-2 text-gray-800">
               En nuestro formulario de contacto
             </h6>
-            <p class="normal-case font-normal tracking-normal text-xs">
+            <p class="text-xs font-normal tracking-normal normal-case">
               Respuesta Asegurada
             </p>
           </div>
         </div>
-        <div class="w-1/2 my-4 flex justify-center items-center">
+        <div class="flex items-center justify-center w-1/2 my-4">
           <svg
-            class="w-7 h-7 mr-4 stroke-current stroke-3 text-gray-900"
+            class="mr-4 text-gray-900 stroke-current w-7 h-7 stroke-3"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 64 64"
           >
@@ -85,7 +85,7 @@
           </svg>
           <div>
             <h6 class="mb-2 text-gray-800">Pago Seguro</h6>
-            <p class="normal-case font-normal tracking-normal text-xs">
+            <p class="text-xs font-normal tracking-normal normal-case">
               Pago Seguro, Operación realizada en España
             </p>
           </div>
