@@ -16,7 +16,7 @@ export default {
   name: 'AppNavItem',
   props: {
     to: {
-      type: String,
+      type: [String, Object],
       required: true
     }
   }
