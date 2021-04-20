@@ -54,7 +54,11 @@
           </div>
 
           <div class="mb-2">
-            <app-button>Enviar Datos</app-button>
+            <app-button
+              class="border border-gray-700 hover:bg-gray-700 hover:text-gray-50 focus:ring-2 focus:ring-gray-400"
+            >
+              Enviar Datos
+            </app-button>
           </div>
         </form>
       </div>
