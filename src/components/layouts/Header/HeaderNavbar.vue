@@ -192,6 +192,7 @@
     >
       <header-login-modal
         v-if="showLoginModal"
+        v-scroll-lock="showLoginModal"
         @close="closeLoginModal"
       ></header-login-modal>
     </transition>
