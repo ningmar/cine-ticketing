@@ -1,8 +1,6 @@
 <template>
-  <div
-    class="fixed inset-0 z-40 flex justify-center p-2 bg-black md:py-8 bg-opacity-30"
-  >
-    <div class="max-w-5xl">
+  <div class="fixed inset-0 z-40 overflow-y-auto bg-black bg-opacity-30">
+    <div class="max-w-5xl mx-auto">
       <div class="relative bg-white bg-clip-padding">
         <button
           class="absolute w-12 h-12 bg-gray-700 -top-1 -right-1 focus:outline-none"
