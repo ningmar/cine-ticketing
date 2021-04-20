@@ -1,5 +1,5 @@
 <template>
-  <app-modal class="px-8 pt-20 pb-8 md:pt-28" @close="$emit('close')">
+  <app-modal class="px-8 pt-20 pb-8 md:pt-28" @close="close">
     <template #ribbon>Login</template>
     <template #content>
       <div class="px-12 pb-4 text-center md:text-left pt-14">
@@ -59,6 +59,11 @@ export default {
     AppButton,
     AppInput,
     AppModal
+  },
+  methods: {
+    close() {
+      this.$emit('close')
+    }
   }
 }
 </script>
