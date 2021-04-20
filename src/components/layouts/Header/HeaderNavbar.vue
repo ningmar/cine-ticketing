@@ -184,10 +184,17 @@
         </a>
       </div>
     </div>
-    <header-login-modal
-      v-if="showLoginModal"
-      @close="closeLoginModal"
-    ></header-login-modal>
+    <transition
+      enter-active-class="transition-all duration-300"
+      leave-active-class="transition-all duration-300"
+      enter-class="opacity-0 -top-20"
+      leave-to-class="opacity-0 -top-20"
+    >
+      <header-login-modal
+        v-if="showLoginModal"
+        @close="closeLoginModal"
+      ></header-login-modal>
+    </transition>
   </nav>
 </template>
 
