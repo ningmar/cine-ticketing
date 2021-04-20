@@ -92,7 +92,11 @@
             </div>
 
             <div class="mb-2">
-              <app-button>Comprobar</app-button>
+              <app-button
+                class="border border-gray-700 hover:bg-gray-700 hover:text-gray-50 focus:ring-2 focus:ring-gray-400"
+              >
+                Comprobar
+              </app-button>
             </div>
           </form>
         </div>
