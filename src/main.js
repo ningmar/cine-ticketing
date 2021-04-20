@@ -3,6 +3,9 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+import VScrollLock from 'v-scroll-lock'
+Vue.use(VScrollLock)
+
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/css/swiper.css'
 Vue.use(VueAwesomeSwiper)
