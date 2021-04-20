@@ -147,10 +147,10 @@
               class="px-4 mb-2 lg:mb-0 lg:py-2 lg:hover:bg-gray-100"
               >Darse de Alta</router-link
             >
-            <router-link
-              to=""
-              class="px-4 mb-2 lg:mb-0 lg:py-2 lg:hover:bg-gray-100"
-              >Login</router-link
+            <a
+              class="px-4 mb-2 cursor-pointer lg:mb-0 lg:py-2 lg:hover:bg-gray-100"
+              @click="openLoginModal"
+              >Login</a
             >
             <router-link
               to=""
