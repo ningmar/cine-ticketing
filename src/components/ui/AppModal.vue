@@ -1,6 +1,6 @@
 <template>
   <div class="fixed inset-0 z-40 overflow-y-auto bg-black bg-opacity-30">
-    <div class="max-w-5xl mx-auto">
+    <div v-on-clickaway="close" class="max-w-5xl mx-auto">
       <div class="relative bg-white bg-clip-padding">
         <button
           class="absolute w-12 h-12 bg-gray-700 -top-1 -right-1 focus:outline-none"
@@ -42,6 +42,7 @@
 </template>
 
 <script>
+import { mixin as clickaway } from 'vue-clickaway'
 import AppButton from '@/components/ui/AppButton'
 
 export default {
@@ -49,6 +50,7 @@ export default {
   components: {
     AppButton
   },
+  mixins: [clickaway],
   methods: {
     close() {
       this.$emit('close')
