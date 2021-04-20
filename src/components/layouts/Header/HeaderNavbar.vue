@@ -163,7 +163,10 @@
       <div
         class="text-sm font-bold text-gray-500 uppercase tracking-extrawide lg:px-4"
       >
-        <a href="#" class="flex items-center py-2">
+        <a
+          class="flex items-center py-2 cursor-pointer"
+          @click="openLoginModal"
+        >
           <svg
             class="w-6 h-6 mr-2 text-gray-900 stroke-current lg:mr-0 stroke-3"
             xmlns="http://www.w3.org/2000/svg"
@@ -181,6 +184,10 @@
         </a>
       </div>
     </div>
+    <header-login-modal
+      v-if="showLoginModal"
+      @close="closeLoginModal"
+    ></header-login-modal>
   </nav>
 </template>
 
@@ -188,17 +195,20 @@
 import AppNavItem from '@/components/ui/AppNavItem'
 import AppNavItemDropdown from '@/components/ui/AppNavItemDropdown'
 import AppNavItemMegaMenu from '@/components/ui/AppNavItemMegaMenu'
+import HeaderLoginModal from './HeaderLoginModal'
 
 export default {
   name: 'HeaderNavbar',
   components: {
     AppNavItem,
     AppNavItemDropdown,
-    AppNavItemMegaMenu
+    AppNavItemMegaMenu,
+    HeaderLoginModal
   },
   data() {
     return {
       isMenuOpen: false,
+      showLoginModal: false,
       billboards: [
         {
           name: 'Cartelera Completa',
@@ -335,6 +345,12 @@ export default {
     }
   },
   methods: {
+    openLoginModal() {
+      this.showLoginModal = true
+    },
+    closeLoginModal() {
+      this.showLoginModal = false
+    },
     chunk(arr, chunkSize) {
       if (chunkSize < 0) throw 'Invalid chunk size'
       let R = []
