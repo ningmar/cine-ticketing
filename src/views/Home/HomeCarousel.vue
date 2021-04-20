@@ -7,7 +7,7 @@
       <div
         id="home-carousel-prev"
         slot="button-prev"
-        class="absolute z-10 hidden transform -translate-y-1/2 xl:block left-10 top-1/2 focus:outline-none"
+        class="absolute z-10 hidden transform -translate-y-1/2 cursor-pointer xl:block left-10 top-1/2 focus:outline-none"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +23,7 @@
       <div
         id="home-carousel-next"
         slot="button-next"
-        class="absolute z-10 hidden transform -translate-y-1/2 xl:block right-10 top-1/2 focus:outline-none"
+        class="absolute z-10 hidden transform -translate-y-1/2 cursor-pointer xl:block right-10 top-1/2 focus:outline-none"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
