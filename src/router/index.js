@@ -1,39 +1,86 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'home',
+    component: () => import(/* webpackChunkName: "home" */ '@/views/Home')
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
+    path: '/compra',
     component: () =>
-      import(/* webpackChunkName: "about" */ '../views/About.vue')
+      import(/* webpackChunkName: "compra" */ '@/views/Purchase'),
+    children: [
+      {
+        path: '',
+        name: 'purchase',
+        redirect: { name: 'check-purchase' }
+      },
+      {
+        path: '/comprueba',
+        name: 'check-purchase',
+        component: () =>
+          import(
+            /* webpackChunkName: "compra" */ '@/views/Purchase/CheckPurchase'
+          )
+      },
+      {
+        path: '/acceso',
+        name: 'access-room',
+        component: () =>
+          import(/* webpackChunkName: "compra" */ '@/views/Purchase/AccessRoom')
+      }
+    ]
   },
   {
-    path: '/getticket',
-    name: 'GetTicket',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
+    path: '/registro',
     component: () =>
-      import(/* webpackChunkName: "about" */ '../views/GetTicket.vue')
+      import(/* webpackChunkName: "registro" */ '@/views/Register'),
+    children: [
+      {
+        path: '/registro',
+        name: 'register',
+        component: () =>
+          import(
+            /* webpackChunkName: "registro" */ '@/views/Register/RegisterCard'
+          )
+      },
+      {
+        path: '/registro-solo-pass',
+        name: 'register-solo-pass',
+        component: () =>
+          import(
+            /* webpackChunkName: "registro" */ '@/views/Register/RegisterPassword'
+          )
+      }
+    ]
   }
 ]
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      if (to.hash) {
+        if (document.querySelector(to.hash)) {
+          return {
+            selector: to.hash,
+            behavior: 'smooth'
+          }
+        }
+        return false
+      }
+
+      return { x: 0, y: 0 }
+    }
+  }
 })
 
 export default router
