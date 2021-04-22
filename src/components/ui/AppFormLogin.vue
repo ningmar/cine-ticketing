@@ -1,17 +1,7 @@
 <template>
   <div class="max-w-5xl mx-auto">
     <div class="relative bg-white bg-clip-padding">
-      <button
-        class="absolute w-12 h-12 bg-gray-700 -top-1 -right-1 focus:outline-none"
-      >
-        <svg
-          class="w-full h-full text-white stroke-current stroke-2"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 64 64"
-        >
-          <path d="M41.999 20.002l-22 22m22 0L20 20" />
-        </svg>
-      </button>
+      <slot name="close-btn"></slot>
       <app-ribbon
         class="top-8"
         bg-color="#9a6ee2"
