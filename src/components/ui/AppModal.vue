@@ -27,7 +27,7 @@
           <path d="M41.999 20.002l-22 22m22 0L20 20" />
         </svg>
       </button>
-      <slot name="content" :close="close"></slot>
+      <slot name="content" :close="close" :isOpen="isOpen"></slot>
     </div>
   </transition>
 </template>
