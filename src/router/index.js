@@ -57,6 +57,35 @@ const routes = [
           )
       }
     ]
+  },
+  {
+    path: '/contacto',
+    component: () => import(/* webpackChunkName: "compra" */ '@/views/Contact'),
+    children: [
+      {
+        path: '',
+        name: 'contact',
+        redirect: { name: 'contact-page' }
+      },
+      {
+        path: '/contacto',
+        name: 'contact-page',
+        component: () =>
+          import(/* webpackChunkName: "compra" */ '@/views/Contact/ContactPage')
+      },
+      {
+        path: '/ace',
+        name: 'access-room',
+        component: () =>
+          import(/* webpackChunkName: "compra" */ '@/views/Contact/AccessRoom')
+      },
+      {
+        path: '/CondicionesProtDatosContacto',
+        name: 'condition',
+        component: () =>
+          import(/* webpackChunkName: "compra" */ '@/views/Contact/Condition')
+      }
+    ]
   }
 ]
 
