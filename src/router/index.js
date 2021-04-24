@@ -80,11 +80,11 @@ const routes = [
           )
       },
       {
-        path: '/protección-datos',
-        name: 'data-protection',
+        path: '/protección-datos-contacto',
+        name: 'data-protection-contact',
         component: () =>
           import(
-            /* webpackChunkName: "policy" */ '@/views//Policy/PolicyDataProtection'
+            /* webpackChunkName: "policy" */ '@/views/Policy/PolicyDataProtection'
           )
       }
     ]
