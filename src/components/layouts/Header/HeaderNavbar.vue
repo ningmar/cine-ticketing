@@ -184,18 +184,6 @@
         </a>
       </div>
     </div>
-    <transition
-      enter-active-class="transition-all duration-300"
-      leave-active-class="transition-all duration-300"
-      enter-class="opacity-0 -top-20"
-      leave-to-class="opacity-0 -top-20"
-    >
-      <header-login-modal
-        v-if="showLoginModal"
-        v-scroll-lock="showLoginModal"
-        @close="closeLoginModal"
-      ></header-login-modal>
-    </transition>
   </nav>
 </template>
 
@@ -203,15 +191,13 @@
 import AppNavItem from '@/components/ui/AppNavItem'
 import AppNavItemDropdown from '@/components/ui/AppNavItemDropdown'
 import AppNavItemMegaMenu from '@/components/ui/AppNavItemMegaMenu'
-import HeaderLoginModal from './HeaderLoginModal'
 
 export default {
   name: 'HeaderNavbar',
   components: {
     AppNavItem,
     AppNavItemDropdown,
-    AppNavItemMegaMenu,
-    HeaderLoginModal
+    AppNavItemMegaMenu
   },
   data() {
     return {
@@ -354,10 +340,7 @@ export default {
   },
   methods: {
     openLoginModal() {
-      this.showLoginModal = true
-    },
-    closeLoginModal() {
-      this.showLoginModal = false
+      this.$store.dispatch('modals/open', 'login')
     },
     chunk(arr, chunkSize) {
       if (chunkSize < 0) throw 'Invalid chunk size'
