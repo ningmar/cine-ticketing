@@ -7,7 +7,7 @@
         :key="movie.id"
         class="w-1/2 px-4 md:w-1/4 lg:w-1/6 sm:w-1/3"
       >
-        <app-card>
+        <app-card @clicked="chooseCinema">
           <template #image>
             <img
               class="object-cover h-auto max-w-full"
@@ -108,6 +108,11 @@ export default {
           image: 'https://artesiete.es/Posters/elpadre.jpg'
         }
       ]
+    }
+  },
+  methods: {
+    chooseCinema() {
+      this.$store.dispatch('modals/open', 'choose-cinema')
     }
   }
 }
