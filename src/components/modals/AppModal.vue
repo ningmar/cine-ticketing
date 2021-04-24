@@ -16,7 +16,7 @@
     >
       <button
         v-if="fullscreen"
-        class="absolute w-12 h-12 top-5 right-10 focus:outline-none"
+        class="absolute w-12 h-12 top-5 right-6 md:right-10 focus:outline-none"
         @click="close"
       >
         <svg
