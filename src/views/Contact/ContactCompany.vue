@@ -63,15 +63,12 @@
               placeholder="Escribe su Email"
             ></app-input>
 
-            <div class="mb-4">
-              <label
-                class="block mb-2 text-xs tracking-widest text-gray-400 uppercase"
-                >Su mensaje para nosotros *</label
-              >
+            <div class="mb-4 text-gray-400">
+              <label class="block mb-2 text-xs tracking-widest uppercase">
+                Su mensaje para nosotros *
+              </label>
               <textarea
-                class="w-full px-2.5 py-2.5 text-sm border border-gray-300 
-              focus:ring-1 focus:ring-gray-500 focus:outline-none"
-                name="message"
+                class="w-full px-3 py-2.5 text-sm border border-gray-300 focus:ring-1 focus:ring-gray-500 focus:outline-none"
                 rows="4"
                 placeholder="Escriba el contenido del mensaje"
               >
@@ -108,11 +105,11 @@
             Si su consulta es sobre una compra o el proceso de compra, utilice
             el formulario de contacto
           </p>
-          <a
-            href="/CondicionesProtDatosContacto"
-            class="inline-block mb-4 text-xs text-indigo-400 hover:underline"
-            >Protección de Datos</a
-          >
+          <p class="mb-4 text-sm text-purple-600 hover:underline">
+            <router-link :to="{ name: 'data-protection-contact' }">
+              Protección de Datos
+            </router-link>
+          </p>
           <ul class="mb-4">
             <li class="inline-block mr-3">
               <a
