@@ -1,21 +1,15 @@
 <template>
   <div class="mb-7">
     <div class="relative border-b-2 border-gray-500 hover:border-purple-500">
-      <div
-        v-if="$slots.ribbon"
-        style="letter-spacing: 0.3em; background-color: #17a2b8;"
-        class="absolute z-10 inline-block px-4 py-1 text-sm text-center text-white uppercase ribbon top-3 -left-3"
-      >
-        <slot name="ribbon"></slot>
-      </div>
+      <slot name="ribbon"></slot>
       <slot name="image"></slot>
       <div
         class="absolute inset-0 flex items-center justify-center transition-all duration-500 bg-white opacity-0 bg-opacity-90 hover:opacity-100"
       >
         <button
           style="letter-spacing: 0.3em"
-          class="flex items-center h-10 px-8 mx-2 text-xs font-bold leading-10 text-center text-white uppercase transition-all duration-300 bg-gray-700 cursor-pointer trac hover:bg-gray-800 "
-          @click.prevent=""
+          class="flex items-center h-10 px-8 mx-2 text-xs font-bold leading-10 text-center text-white uppercase transition-all duration-300 bg-gray-700 cursor-pointer hover:bg-gray-800"
+          @click="actionClicked"
         >
           <slot name="action">Action</slot>
         </button>
@@ -38,18 +32,11 @@
 
 <script>
 export default {
-  name: 'AppCard'
+  name: 'AppCard',
+  methods: {
+    actionClicked() {
+      this.$emit('clicked')
+    }
+  }
 }
 </script>
-
-<style scoped>
-.ribbon::before {
-  position: absolute;
-  left: 0;
-  bottom: -14px;
-  content: '';
-  border-left: 12px solid transparent;
-  border-right: 0 solid transparent;
-  border-top: 14px solid #0c525d;
-}
-</style>
