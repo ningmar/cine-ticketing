@@ -26,12 +26,6 @@ const routes = [
           import(
             /* webpackChunkName: "compra" */ '@/views/Purchase/CheckPurchase'
           )
-      },
-      {
-        path: '/acceso',
-        name: 'access-room',
-        component: () =>
-          import(/* webpackChunkName: "compra" */ '@/views/Purchase/AccessRoom')
       }
     ]
   },
@@ -60,30 +54,38 @@ const routes = [
   },
   {
     path: '/contacto',
-    component: () => import(/* webpackChunkName: "compra" */ '@/views/Contact'),
+    component: () =>
+      import(/* webpackChunkName: "contacto" */ '@/views/Contact'),
     children: [
       {
-        path: '',
-        name: 'contact',
-        redirect: { name: 'contact-page' }
-      },
-      {
         path: '/contacto',
-        name: 'contact-page',
+        name: 'contact-company',
         component: () =>
-          import(/* webpackChunkName: "compra" */ '@/views/Contact/ContactPage')
-      },
+          import(
+            /* webpackChunkName: "contacto" */ '@/views/Contact/ContactCompany'
+          )
+      }
+    ]
+  },
+  {
+    path: '/legal',
+    component: () => import(/* webpackChunkName: "policy" */ '@/views/Policy'),
+    children: [
       {
-        path: '/ace',
+        path: '/acceso',
         name: 'access-room',
         component: () =>
-          import(/* webpackChunkName: "compra" */ '@/views/Contact/AccessRoom')
+          import(
+            /* webpackChunkName: "policy" */ '@/views/Policy/PolicyAccessRoom'
+          )
       },
       {
-        path: '/CondicionesProtDatosContacto',
-        name: 'condition',
+        path: '/protección-datos',
+        name: 'data-protection',
         component: () =>
-          import(/* webpackChunkName: "compra" */ '@/views/Contact/Condition')
+          import(
+            /* webpackChunkName: "policy" */ '@/views//Policy/PolicyDataProtection'
+          )
       }
     ]
   }
