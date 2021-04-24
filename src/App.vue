@@ -6,6 +6,7 @@
       <app-footer></app-footer>
     </div>
     <div id="app-modals">
+      <app-modal-choose-cinema></app-modal-choose-cinema>
       <app-modal-login></app-modal-login>
     </div>
   </div>
@@ -14,9 +15,10 @@
 <script>
 import AppFooter from '@/components/layouts/Footer'
 import AppHeader from '@/components/layouts/Header'
+import AppModalChooseCinema from '@/components/modals/AppModalChooseCinema'
 import AppModalLogin from '@/components/modals/AppModalLogin'
 
 export default {
-  components: { AppFooter, AppHeader, AppModalLogin }
+  components: { AppFooter, AppHeader, AppModalChooseCinema, AppModalLogin }
 }
 </script>
