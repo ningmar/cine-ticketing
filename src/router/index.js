@@ -80,7 +80,7 @@ const routes = [
           )
       },
       {
-        path: '/protección-datos-contacto',
+        path: '/proteccion-datos-contacto',
         name: 'data-protection-contact',
         component: () =>
           import(
