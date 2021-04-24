@@ -9,7 +9,7 @@
         <button
           style="letter-spacing: 0.3em"
           class="flex items-center h-10 px-8 mx-2 text-xs font-bold leading-10 text-center text-white uppercase transition-all duration-300 bg-gray-700 cursor-pointer hover:bg-gray-800"
-          @click.prevent=""
+          @click="actionClicked"
         >
           <slot name="action">Action</slot>
         </button>
@@ -32,6 +32,11 @@
 
 <script>
 export default {
-  name: 'AppCard'
+  name: 'AppCard',
+  methods: {
+    actionClicked() {
+      this.$emit('clicked')
+    }
+  }
 }
 </script>
