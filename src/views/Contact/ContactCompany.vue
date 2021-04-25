@@ -159,7 +159,7 @@ import AppButton from '@/components/ui/AppButton'
 import AppInput from '@/components/ui/AppInput'
 
 export default {
-  name: 'CheckPurchase',
+  name: 'ContactCompany',
   components: {
     AppButton,
     AppInput
