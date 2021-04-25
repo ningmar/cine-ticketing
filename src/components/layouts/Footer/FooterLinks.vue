@@ -71,9 +71,12 @@
               </router-link>
             </li>
             <li>
-              <router-link class="hover:underline" to="/contacto"
-                >Contacto Empresa</router-link
+              <router-link
+                class="hover:underline"
+                :to="{ name: 'contact-company' }"
               >
+                Contacto Empresa
+              </router-link>
             </li>
             <li>
               <router-link class="hover:underline" to="/trabajaconnosotros"
