@@ -9,6 +9,7 @@
       :type="type"
       :placeholder="placeholder"
       class="w-full px-3 py-2.5 text-sm border border-gray-300 focus:ring-1 focus:ring-gray-500 focus:outline-none"
+      :required="required"
     />
   </div>
 </template>
