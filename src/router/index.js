@@ -64,6 +64,14 @@ const routes = [
           import(
             /* webpackChunkName: "contacto" */ '@/views/Contact/ContactCompany'
           )
+      },
+      {
+        path: '/trabaja-con-nosotros',
+        name: 'work-with-us',
+        component: () =>
+          import(
+            /* webpackChunkName: "contacto" */ '@/views/Contact/ContactWorkWithUs'
+          )
       }
     ]
   },
