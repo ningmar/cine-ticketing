@@ -10,7 +10,9 @@
     >
       <swiper-slide v-for="movie in upcomings" :key="movie.id" class="px-3">
         <app-card>
-          <template #ribbon>{{ movie.release_date }}</template>
+          <template #ribbon>
+            <app-ribbon>{{ movie.release_date }}</app-ribbon>
+          </template>
           <template #image>
             <img
               class="object-cover h-auto max-w-full"
@@ -37,12 +39,14 @@
 
 <script>
 import AppCard from '@/components/ui/AppCard'
+import AppRibbon from '@/components/ui/AppRibbon'
 import AppSectionTitle from '@/components/ui/AppSectionTitle'
 
 export default {
   name: 'HomeNextReleases',
   components: {
     AppCard,
+    AppRibbon,
     AppSectionTitle
   },
   data() {
