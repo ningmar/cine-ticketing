@@ -3,7 +3,10 @@
     <div class="flex items-center justify-end sm:px-4 sm:justify-between">
       <ul class="hidden sm:flex">
         <li class="pr-4">
-          <a href="#" class="flex items-center">
+          <router-link
+            :to="{ name: 'contact-company' }"
+            class="flex items-center"
+          >
             <svg
               class="w-4.5 h-4.5 mr-2 stroke-current stroke-4"
               xmlns="http://www.w3.org/2000/svg"
@@ -29,12 +32,15 @@
             <span>
               Ayuda a la compra: click aquí
             </span>
-          </a>
+          </router-link>
         </li>
         <li class="px-4 border-l-2">
-          <a href="#" class="hover:underline">
+          <router-link
+            :to="{ name: 'contact-company' }"
+            class="hover:underline"
+          >
             Contacto Empresa
-          </a>
+          </router-link>
         </li>
       </ul>
       <!-- Language Dropdown -->

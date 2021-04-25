@@ -26,12 +26,6 @@ const routes = [
           import(
             /* webpackChunkName: "compra" */ '@/views/Purchase/CheckPurchase'
           )
-      },
-      {
-        path: '/acceso',
-        name: 'access-room',
-        component: () =>
-          import(/* webpackChunkName: "compra" */ '@/views/Purchase/AccessRoom')
       }
     ]
   },
@@ -54,6 +48,59 @@ const routes = [
         component: () =>
           import(
             /* webpackChunkName: "registro" */ '@/views/Register/RegisterPassword'
+          )
+      }
+    ]
+  },
+  {
+    path: '/contacto',
+    component: () =>
+      import(/* webpackChunkName: "contacto" */ '@/views/Contact'),
+    children: [
+      {
+        path: '/contacto',
+        name: 'contact-company',
+        component: () =>
+          import(
+            /* webpackChunkName: "contacto" */ '@/views/Contact/ContactCompany'
+          )
+      },
+      {
+        path: '/trabaja-con-nosotros',
+        name: 'work-with-us',
+        component: () =>
+          import(
+            /* webpackChunkName: "contacto" */ '@/views/Contact/ContactWorkWithUs'
+          )
+      }
+    ]
+  },
+  {
+    path: '/legal',
+    component: () => import(/* webpackChunkName: "policy" */ '@/views/Policy'),
+    children: [
+      {
+        path: '/acceso',
+        name: 'access-room',
+        component: () =>
+          import(
+            /* webpackChunkName: "policy" */ '@/views/Policy/PolicyAccessRoom'
+          )
+      },
+      {
+        path: '/proteccion-datos-contacto',
+        name: 'data-protection-contact',
+        component: () =>
+          import(
+            /* webpackChunkName: "policy" */ '@/views/Policy/PolicyDataProtection'
+          )
+      },
+      {
+        path: '/proteccion-datos-curriculum',
+        name: 'data-protection-curriculum',
+        component: () =>
+          import(
+            /* webpackChunkName: "policy" */ '@/views/Policy/PolicyDataProtection'
           )
       }
     ]

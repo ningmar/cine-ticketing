@@ -2,12 +2,12 @@
   <section class="max-w-6xl mx-auto">
     <div class="px-4 mb-12 text-center">
       <ul class="py-8 text-xs">
-        <li class="inline px-1">Comprueba</li>
+        <li class="inline px-1">Contacto</li>
         <li class="inline px-1">/</li>
         <li class="inline px-1 text-gray-500">Artesiete</li>
       </ul>
       <h3 class="text-xl font-light text-gray-400">
-        Comprueba tu Compra
+        Contacta Con Nosotros
       </h3>
     </div>
     <div>
@@ -15,17 +15,19 @@
         style="font-size: 1.35rem"
         class="px-4 mb-2 font-bold leading-tight text-center"
       >
-        Utilice este formulario para comprobar el estado de su compra y/o
-        obtener una copia de su comprobante.
+        Utilice este formulario para hacernos llegar sus comentarios o
+        sugerencias sobre nuestros cines.
       </h3>
       <div class="flex flex-wrap py-4 md:px-6 xl:px-0">
         <div class="w-full px-4 md:w-3/5">
           <form>
             <app-input
-              label="Fecha de compra"
+              label="Nombre"
               :required="true"
-              type="date"
-            ></app-input>
+              placeholder="Escriba su nombre"
+              type="text"
+            >
+            </app-input>
 
             <div class="mb-4">
               <label
@@ -54,30 +56,24 @@
               </select>
             </div>
 
-            <div class="flex flex-wrap items-center justify-between mb-4">
-              <p class="text-sm font-bold">
-                Otros Datos, completa al menos uno de los tres.
-              </p>
-              <p class="text-sm font-medium text-center text-red-500">
-                Debe introducir uno de los 3 valores
-              </p>
-            </div>
-
             <app-input
-              label="Tu Email"
+              label="Email"
+              :required="true"
               type="email"
-              placeholder="Escribe tu Email"
+              placeholder="Escribe su Email"
             ></app-input>
 
-            <app-input
-              label="Tu Referencia"
-              placeholder="Escribe la Referencia"
-            ></app-input>
-
-            <app-input
-              label="Cod Barras"
-              placeholder="Escribe el codigo de barras"
-            ></app-input>
+            <div class="mb-4 text-gray-400">
+              <label class="block mb-2 text-xs tracking-widest uppercase">
+                Su mensaje para nosotros *
+              </label>
+              <textarea
+                class="w-full px-3 py-2.5 text-sm border border-gray-300 focus:ring-1 focus:ring-gray-500 focus:outline-none"
+                rows="4"
+                placeholder="Escriba el contenido del mensaje"
+              >
+              </textarea>
+            </div>
 
             <div class="flex items-center mb-5">
               <input
@@ -86,8 +82,7 @@
               />
               <span class="ml-2 text-sm">
                 He leido y acepto expresamente la política de privacidad y el
-                tratamiento de mis datos. Lealas
-                <a href="#" class="text-purple-600 hover:underline">AQUI</a>
+                tratamiento de mis datos.
               </span>
             </div>
 
@@ -95,19 +90,25 @@
               <app-button
                 class="border border-gray-700 hover:bg-gray-700 hover:text-gray-50 focus:ring-2 focus:ring-gray-400"
               >
-                Comprobar
+                Enivar
               </app-button>
             </div>
           </form>
         </div>
         <div class="w-full p-4 mt-10 md:w-2/5 md:mt-0">
           <p class="mb-4 text-sm text-gray-400">
-            Utiliza este formulario para consultar su compra y obtener una copia
-            de su comprobante.
+            Utiliza este formulario para consultas y comentarios al cine, para
+            enviarnos tu curriculum utiliza la opción trabaja con nosotros en el
+            pie de página.
           </p>
           <p class="mb-4 text-sm text-gray-400">
-            Si tiene alguna consulta sobre su compra o el proceso de compra,
-            utilice el formulario de contacto.
+            Si su consulta es sobre una compra o el proceso de compra, utilice
+            el formulario de contacto
+          </p>
+          <p class="mb-4 text-sm text-purple-600 hover:underline">
+            <router-link :to="{ name: 'data-protection-contact' }">
+              Protección de Datos
+            </router-link>
           </p>
           <ul class="mb-4">
             <li class="inline-block mr-3">
@@ -158,7 +159,7 @@ import AppButton from '@/components/ui/AppButton'
 import AppInput from '@/components/ui/AppInput'
 
 export default {
-  name: 'CheckPurchase',
+  name: 'ContactCompany',
   components: {
     AppButton,
     AppInput
