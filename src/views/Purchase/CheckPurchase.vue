@@ -87,7 +87,7 @@
               <span class="ml-2 text-sm">
                 He leido y acepto expresamente la política de privacidad y el
                 tratamiento de mis datos. Lealas
-                <a href="#" class="text-indigo-400 hover:underline">AQUI</a>
+                <a href="#" class="text-purple-600 hover:underline">AQUI</a>
               </span>
             </div>
 
