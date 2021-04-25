@@ -86,6 +86,14 @@ const routes = [
           import(
             /* webpackChunkName: "policy" */ '@/views/Policy/PolicyDataProtection'
           )
+      },
+      {
+        path: '/proteccion-datos-curriculum',
+        name: 'data-protection-curriculum',
+        component: () =>
+          import(
+            /* webpackChunkName: "policy" */ '@/views/Policy/PolicyDataProtection'
+          )
       }
     ]
   }
