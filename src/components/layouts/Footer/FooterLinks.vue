@@ -79,9 +79,12 @@
               </router-link>
             </li>
             <li>
-              <router-link class="hover:underline" to="/trabajaconnosotros"
-                >Trabaja con Nosotros</router-link
+              <router-link
+                class="hover:underline"
+                :to="{ name: 'work-with-us' }"
               >
+                Trabaja con Nosotros
+              </router-link>
             </li>
             <li>
               <router-link class="hover:underline" to="/cookies"
